@@ -1,0 +1,32 @@
+@media(max-width:860px){
+  /* Native touch scrolling, without a second CSS smooth-scroll interpolation. */
+  html{scroll-behavior:auto}
+  #hd.s{backdrop-filter:none;background:#211b24}
+  .dark,.mesh,.product-orbit,.hx,.ex .hx{animation:none!important}
+  .hero-product>img{filter:none}
+  .cabinet-animated .cabinet-motion{filter:none}
+  .cabinet-door-outside polygon{filter:none}
+  .cabinet-door{will-change:auto}
+  .cabinet-animated.cabinet-in-view .cabinet-door{will-change:transform}
+  .pc-product,.hc-layer{backface-visibility:hidden}
+  .pc-section,.honeycomb-reveal{contain:paint}
+}
+@media(max-width:767px){
+  #panel-journey.pc-animated .pc-stage{min-height:640px}
+  #material.hc-animated .hc-stage{min-height:640px}
+  #material.hc-animated .hc-stories{min-height:260px}
+  #material .hc-model{top:28%}
+  #material .hc-row,#material .hc-row i{transition:color .2s,background-color .2s}
+  #material .hc-row[aria-current="step"]{padding-left:2px}
+}
+@media(max-width:767px) and (max-height:700px){
+  #material.hc-animated .hc-copy{bottom:48px}
+  #material.hc-animated .hc-stories{min-height:240px}
+  #material.hc-animated h2{font-size:30px}
+  #material.hc-animated .hc-description{font-size:14px;line-height:1.5;margin:12px 0}
+  #material.hc-animated .hc-row{min-height:38px;padding:9px 2px;font-size:12px}
+  #material.hc-animated .hc-model{width:min(76vw,320px)}
+  #panel-journey.pc-animated .pc-copy h2{font-size:30px}
+  #panel-journey.pc-animated .pc-description{font-size:14px;line-height:1.5;margin:12px 0}
+  #panel-journey.pc-animated .pc-rows button{font-size:12px;padding:10px 0}
+}

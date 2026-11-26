@@ -1,0 +1,87 @@
+{
+  "version": 1,
+  "signatures": {
+    "ask-inox.sources.json": "b92dd085f9d98355055dff9a31b9f850bfb491a099d9738353c2bb29c6334c54",
+    "src/app/about/page.tsx": "9cdf69667da2ae9dc5669f7769241b2ad0617a6b5ade7dfa74d3f637985b2f87",
+    "src/app/contact/page.tsx": "348c774b916fbf7bf7f5d188d34261d31d932aa9773950cabc15ad7bc5b1c2d9",
+    "src/components/catalogue-downloads.tsx": "4027c248dc3287590e070cc635042c36c993e68b69fbefedaaeffa9a90d9a1b1",
+    "src/components/architectural-collections.tsx": "939d6f744c36e0c3f375d4b68c7bbde8b90694d1e60d9ff6b39e5c80d4578737",
+    "public/honeycomb/index.html": "e4c03cca80503877c1fab2da2d86fbbbb67428875d91bf0e12fe37f3c857a9ad",
+    "public/media/collection.pdf": "594e5073eb3892ee234544bfd3cab99085bef680d6ba769505374dab7f0b59d0",
+    "src/app/privacy/page.tsx": "443b4e99a6f77bd104773660f2228e6c5efba3e9edffd14ce256020b6a87db58",
+    "src/app/page.tsx": "17a91be52298f7145e3f38a57ec24df3a279e75c96cf4d5ee1dda5eec8a7028b",
+    "src/components/enquiry-form.tsx": "3b90c64cfcdf47ebc505c0860347794b857165d42b04037253e9c87dd1d37035"
+  },
+  "chunks": [
+    {
+      "title": "About INOX",
+      "href": "/about",
+      "text": "Discover INOX interior solutions, kitchen hardware and architectural fittings. is a trusted name in premium fittings, hardware and interior solutions for modern living. We create thoughtfully engineered products that bring function, durability and refined design to kitchens, wardrobes and everyday spaces. With a focus on quality, innovation and long-term performance, helps shape interiors that work beautifully every day. Explore our solutions Purpose in every detail."
+    },
+    {
+      "title": "Contact INOX",
+      "href": "/contact",
+      "text": "Start a conversation with INOX about your next interior project. Verified business address, contact number and opening hours are pending brand confirmation. No unverified WhatsApp or map links are published."
+    },
+    {
+      "title": "INOX catalogues",
+      "href": "/catalogues",
+      "text": "Collection overview All collection links currently open the same legacy PDF supplied in the existing repository. Current category-specific PDFs are pending. Need technical documentation? Contact"
+    },
+    {
+      "title": "XCOMB aluminium honeycomb panels",
+      "href": "/xcomb",
+      "text": "The intelligence within Extraordinary, at the core. Discover INOX XCOMB aluminium honeycomb panels. A cellular core brings a different approach to panel construction, opening possibilities for considered interior surfaces. A cellular foundation An aluminium honeycomb core sits between outer layers, creating a sandwich panel structure inspired by the efficiency of a honeycomb. A surface for your vision Explore panel possibilities for furniture, cabinetry and interior features. The right finish and construction depend on your application. Details that make the difference Talk to our team about panel sizes, available finishes, edge details and suitability before specifying XCOMB for your project."
+    },
+    {
+      "title": "INOX Facade",
+      "href": "/facade",
+      "text": "Architecture, in a new light Bespoking Luxury Metalness \b Grandiodising Exterirors and Interiors. An architectural signature Explore expressive surfaces for entrances, exterior compositions and distinctive architectural features. Designed around light Consider how profiles, patterns and finishes change with the sun, bringing depth and movement to a building’s elevation. A considered specification Discuss the finish, supporting structure and installation requirements with our team to find a direction suited to your project."
+    },
+    {
+      "title": "Honeycomb public experience",
+      "href": "/honeycomb",
+      "text": "INOX Aluminium Honeycomb – Premium Panel Solutions for Modern Interiors Skip to content ALUMINIUM HONEYCOMB Menu Material Why INOX Advantages Applications Finishes Request a Consultation ↗ INOX · 2026 --> ALUMINIUM HONEYCOMB Premium Panel Solutions for Modern Interiors Strong. Lightweight. Waterproof. Termite Free. Explore Honeycomb ↘ Request a Consultation ↗ Kitchens / Wardrobes / Doors / Wall Panels / Cabinets THE ARCHITECTURE OF STRENGTH. SCROLL TO DISCOVER ↓ INOX / A MATERIAL STUDY ALUMINIUM HONEYCOMB SCROLL TO EXPLORE THE ENGINEERING THE ENGINEERING WITHIN Strength inside. Elegance outside. Discover the precision-engineered aluminium honeycomb core that brings lightweight strength and refined surface design together. Panel surface Aluminium Honeycomb Core Premium finish EXPOSED CORE Explore the layers INOX / THE CONSTRUCTION STUDY THREE LAYERS. ONE PANEL. The surface / A considered first impression Beauty on the surface. A natural wood veneer lifts away to reveal the aluminium honeycomb construction beneath. Natural wood veneer / Refined surface The core / Strength from within Less weight. More possibility. Beneath the veneer, an open network of aluminium cells gives the panel its lightweight structure. Look closer. The engineering is in the spaces. Natural veneer / Cellular aluminium The finish / Every layer has a purpose Three layers. One considered panel. Wood veneer, a"
+    },
+    {
+      "title": "Honeycomb public experience",
+      "href": "/honeycomb",
+      "text": " its lightweight structure. Look closer. The engineering is in the spaces. Natural veneer / Cellular aluminium The finish / Every layer has a purpose Three layers. One considered panel. Wood veneer, aluminium honeycomb core and a supporting bottom sheet. Three distinct layers, brought together for modern cabinetry and interiors. Explore the materials / Imagine the application Wood veneer The surface Aluminium Honeycomb Core The strength Supporting sheet The foundation DISTINCT LAYERS. CONSIDERED TOGETHER. SCROLL TO EXPLORE THE LAYERS THE PANEL, REVEALED. Continue to engineering 02 / WHY INOX Engineered for shutters & carcasses. Aluminium honeycomb panels bring lightweight strength and a refined finish to modern cabinetry. INOX / CONSTRUCTION STUDY 01 — 03 01 02 03 SELECT A NUMBER TO EXPLORE ↗ Explore the construction 01 Shutter ↗ 02 Carcass ↗ 03 Aluminium Honeycomb Core ↗ IN FOCUS Shutter The front opening panel, shown with cabinet hardware. Discuss your application ↗ Key Advantages Considered in every detail. Waterproof Lightweight Termite Free Anti-Corrosion Fire Resistant 15-Year Structural Warranty Warranty terms: please contact INOX for the actual terms of the 15-Year Structural Warranty. Applications & Finishes DESIGNED FOR EVERY INTERIOR. INOX Aluminium Honeycomb panels bring strength, stability, and premium finish to complete interior systems. Kitchen Cabinets ↗ Office "
+    },
+    {
+      "title": "Honeycomb public experience",
+      "href": "/honeycomb",
+      "text": "al Warranty. Applications & Finishes DESIGNED FOR EVERY INTERIOR. INOX Aluminium Honeycomb panels bring strength, stability, and premium finish to complete interior systems. Kitchen Cabinets ↗ Office Furniture ↗ TV Units ↗ Wardrobes ↗ Also designed for Bathroom Vanities ↗ Doors ↗ Wall Panels ↗ Storage Cabinets ↗ Finishes Your space. Your finish. Discover finishes that complement your design. Contact our team for available colours, textures and finish options. Explore Finishes Enquire About Finishes Touch the box too see the colors · not a finish catalogue Warm tone Deep tone Dark tone Green tone Blue tone Coral tone Tones only suggest direction. Actual colours, textures and finish options are confirmed by INOX. INOX / ENGINEERED TO INSPIRE BUILT TO LAST. Designed for Modern Interiors Premium aluminium honeycomb panel solutions engineered for strength, stability, and long-term performance. Strong Lightweight Waterproof Termite Free 15 15-Year Structural Warranty Request actual warranty terms from INOX. Enquiry Let’s build your vision. Request a Consultation For architects, interior designers, fabricators and customers. Tell us what you are planning to begin a conversation with INOX. INOX BUILDING SYSTEMS +91 11 46467755 info@inoxdecor.com www.inoxdecor.com Block B-1, Plot No. 1/2, Main Najafgarh Road, Janak Puri East, New Delhi - 110058, India Contact INOX Website Your enquiry o"
+    },
+    {
+      "title": "Honeycomb public experience",
+      "href": "/honeycomb",
+      "text": " INOX BUILDING SYSTEMS +91 11 46467755 info@inoxdecor.com www.inoxdecor.com Block B-1, Plot No. 1/2, Main Najafgarh Road, Janak Puri East, New Delhi - 110058, India Contact INOX Website Your enquiry opens in your email app. Review and send it there. This website does not store your enquiry. Full Name Phone / WhatsApp Email (optional if phone provided) Customer Type Architect Interior Designer Fabricator Customer Interested Application Kitchen Cabinets Wardrobes TV Units Bathroom Vanities Doors Wall Panels Office Furniture Storage Cabinets Finishes Project Location Requirements / Message I agree that INOX may use these details to respond to my enquiry. Request a Consultation INOX BUILDING SYSTEMS +91 11 46467755 info@inoxdecor.com www.inoxdecor.com Block B-1, Plot No. 1/2, Main Najafgarh Road, Janak Puri East, New Delhi - 110058, India Material Why INOX Key Advantages Applications Finishes Request brochure Return to inoxdecor.com INOX Aluminium Honeycomb · 2026 Edition · Brochure imagery © INOX."
+    },
+    {
+      "title": "INOX privacy policy",
+      "href": "/privacy",
+      "text": "How INOX handles website account details, product enquiries, cookies and your privacy requests. When you create a website account, we collect your name, email address, country code, mobile number, optional company name and account consent. We store a password hash rather than your original password. When you send an enquiry, we collect the contact and project details you provide, your message, selected products, variations and quantities. Enquiries sent while signed in are linked to your account so you can revisit them. We use your details to create and secure your account, provide signed-in access to product prices, save your enquiries, respond to project requests and manage follow-up. Account records also help us maintain the website and investigate misuse. We record website registration, successful sign-ins, sign-outs and enquiry submissions. Authorised website administrators can view customer contact details, account activity, valid session counts and enquiries to manage website services and customer requests. Customers can access enquiries linked to their own account. Entering an email address into a guest enquiry does not automatically attach it to an account. We use an essential session cookie to keep you signed in. Customer sessions expire after seven days unless you sign out earlier. This cookie is HTTP-only, so website scripts cannot read it. Your enquiry basket is st"
+    },
+    {
+      "title": "INOX privacy policy",
+      "href": "/privacy",
+      "text": "tial session cookie to keep you signed in. Customer sessions expire after seven days unless you sign out earlier. This cookie is HTTP-only, so website scripts cannot read it. Your enquiry basket is stored in your browser so your selections remain on that device. Your browser may also remember preferences you choose to save. You can remove cookies and local storage through your browser settings; doing so may sign you out or clear your selections. Hosting and database services process information as part of operating this website. Information submitted in an enquiry is available to the team handling that request. Disclosure may also be necessary to meet applicable requirements or protect the service from misuse. External websites linked from this site have their own privacy practices. Review their policies before sharing information with them. Account and enquiry information is retained to provide account services, handle customer requests and meet applicable record-keeping needs. Browser-stored selections remain until you remove them or clear your browser storage. We use password hashing, session checks and access controls to protect website account information. No online service can guarantee absolute security. Keep your password private and sign out when using a shared device. You can sign out at any time and view your saved enquiries from My account. To ask about your informa"
+    },
+    {
+      "title": "INOX privacy policy",
+      "href": "/privacy",
+      "text": "n guarantee absolute security. Keep your password private and sign out when using a shared device. You can sign out at any time and view your saved enquiries from My account. To ask about your information, request a correction, or request deletion of account or enquiry records, contact the INOX team . We may need to verify your identity before acting on a request. Some records may need to be retained for applicable obligations. Please do not include passwords or sensitive personal information in an enquiry. This policy describes the INOX website account and enquiry services. We may update it as these services change. For questions about this policy or how website information is handled, please"
+    },
+    {
+      "title": "INOX home",
+      "href": "/",
+      "text": "The art of everyday living The details make the difference. Every time. Every day. Discover the collection Engineered interiors. Designed to endure. is a complete interior solutions brand offering premium Hardware, Kitchens, Wardrobes, XCOMB aluminium honeycomb panels and Facade. 26+ Years of Excellence 670+ Channel Partners 4M+ Happy Customers Presence in 18 States, 85 Cities Considered details. Extraordinary spaces. Living collections / Engineering in motion Explore fittings, hardware and storage solutions that bring every part of your interior together. Explore all products Materials. Movement. Possibilities. Thoughtfully selected. Beautifully connected. Find the right details for your project Designed for spaces A kitchen that moves with you. A wardrobe that brings order to your day. Hardware that quietly makes everything feel right. We believe the best details are the ones you feel, every day. KITCHEN · WARDROBE · HARDWARE Explore the finer details Explore our interior solutions, materials and possibilities in the"
+    },
+    {
+      "title": "Product enquiry process",
+      "href": "/enquiry",
+      "text": "Made for your project. Your enquiry basket is empty. Tell us about your project City / Project location Product information I agree to be contacted by about this enquiry. Your enquiry will reach our team. before sending to also save it to your account. View your saved enquiries"
+    }
+  ]
+}

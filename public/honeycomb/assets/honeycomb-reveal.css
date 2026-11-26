@@ -1,0 +1,82 @@
+/* Scoped replacement for the old single-image material study. Static = exploded. */
+#material.honeycomb-reveal{--reveal-ink:#30252f;--reveal-muted:#706b76;--reveal-accent:#927c9b;position:relative;height:auto;background:radial-gradient(ellipse at 65% 38%,#ffffff 0,transparent 60%),linear-gradient(125deg,#e9e9ed,#d9dce1);color:var(--reveal-ink);animation:none;isolation:isolate}
+#material .hc-stage{position:relative;height:100svh;min-height:680px;overflow:hidden}
+#material .hc-blueprint{position:absolute;inset:0;width:100%;height:100%;color:#716d80;opacity:.035;pointer-events:none}
+#material .hc-copy{position:absolute;left:max(40px,calc((100% - 1450px)/2));top:55%;width:36%;max-width:490px;transform:translateY(-50%);z-index:2}
+#material .hc-stories{position:relative;min-height:325px}
+#material .hc-chapter{padding:0 0 28px}
+#material.hc-animated .hc-chapter{position:absolute;inset:0 0 auto}
+#material .hc-kicker{font:400 12px/1.7 var(--m);text-transform:uppercase;letter-spacing:.16em;color:var(--reveal-muted);margin:0 0 18px}
+#material h2{font:400 clamp(36px,3.8vw,64px)/1.08 var(--d);letter-spacing:-.045em;margin:0}
+#material h2 span{display:block}
+#material h2 span:last-child{font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-weight:400;color:#8b7a94;letter-spacing:-.025em}
+#material .hc-description{font:400 16px/1.85 var(--d);letter-spacing:-.015em;max-width:39ch;margin:22px 0 18px;color:#625c69}
+#material .hc-detail{font:400 12px/1.7 var(--m);letter-spacing:.045em;color:#706b76;margin:0}
+#material .hc-detail span{padding:0 9px;color:#aaa0ae}
+#material .hc-progress{height:1px;background:#40344224;margin-bottom:8px;overflow:hidden}
+#material .hc-progress span{height:100%;display:block;background:var(--reveal-accent);transform-origin:left}
+#material .hc-rows{display:grid}
+#material .hc-row{appearance:none;display:flex;align-items:center;gap:15px;width:100%;min-height:55px;text-align:left;padding:15px 2px;border:0;border-bottom:1px solid #4034421a;background:transparent;font:400 14px/1.4 var(--d);color:var(--reveal-muted);cursor:pointer;transition:color .25s,background .25s,padding .25s}
+#material .hc-row i{width:6px;height:6px;flex:none;border:1px solid #8e8293;border-radius:50%;background:transparent;transition:background .25s}
+#material .hc-row[aria-current="step"]{color:var(--reveal-ink);font-weight:500;background:linear-gradient(90deg,#93809f0c,transparent);padding-left:12px}
+#material .hc-row[aria-current="step"] i{background:var(--reveal-accent);border-color:var(--reveal-accent)}
+#material .hc-row:hover{color:var(--reveal-ink)}
+#material .hc-row:focus-visible,#material .hc-skip:focus-visible{outline:2px solid #796681;outline-offset:4px}
+#material .hc-model{position:absolute;left:73%;top:55%;width:min(54vw,900px,calc((100svh - 300px) * 1.05263));aspect-ratio:800/760;transform:translate(-50%,-50%);pointer-events:none}
+#material .hc-layer{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;max-width:none;filter:none;box-shadow:none;transform:translateY(calc(var(--rest) * 100% / 760));transform-origin:50% 46%}
+#material .hc-layer[data-layer="wood-veneer"]{z-index:3;--rest:-105}
+#material .hc-layer[data-layer="aluminium-core"]{z-index:2;--rest:0}
+#material .hc-layer[data-layer="bottom-sheet"]{z-index:1;--rest:139.65}
+#material .hc-shadow{position:absolute;left:18%;top:76%;width:65%;height:6%;background:radial-gradient(ellipse,#40344230,transparent 70%);transform:scale(1.1);opacity:.55}
+#material .hc-hint{position:absolute;left:50%;top:72%;transform:translateX(-50%);display:none;align-items:center;gap:16px;white-space:nowrap;font:400 11px/1.5 var(--m);letter-spacing:.16em;color:var(--reveal-muted)}
+#material .hc-hint::before{content:'';width:1px;height:38px;background:#84708755}
+#material .hc-caption{position:absolute;left:50%;bottom:11%;transform:translateX(-50%);font:400 11px/1.5 var(--m);letter-spacing:.12em;color:#706b76;white-space:nowrap;opacity:.8}
+#material .hc-skip{position:absolute;right:4%;bottom:30px;font:400 12px/1.5 var(--m);color:#625c69;border-bottom:1px solid #84708755;z-index:3}
+#material.hc-animated .hc-layer,#material.hc-animated .hc-model{will-change:transform}
+#material.hc-animated .hc-hint{display:flex}
+/* Closed first paint while local material images decode. No-JS stays exploded. */
+.hc-loading #material:not(.hc-animated) .hc-copy{visibility:hidden}
+.hc-loading #material:not(.hc-animated) .hc-model{left:50%;top:50%}
+.hc-loading #material:not(.hc-animated) .hc-hint{display:flex}
+.hc-loading #material:not(.hc-animated) .hc-caption{visibility:hidden}
+.hc-loading #material:not(.hc-animated) .hc-layer[data-layer="wood-veneer"]{--rest:-4}
+.hc-loading #material:not(.hc-animated) .hc-layer[data-layer="aluminium-core"]{--rest:0}
+.hc-loading #material:not(.hc-animated) .hc-layer[data-layer="bottom-sheet"]{--rest:36}
+@media(min-width:1700px){#material .hc-copy{left:max(56px,calc((100% - 1450px)/2))}}
+@media(min-width:768px) and (max-width:1100px){#material .hc-copy{left:30px;width:40%}#material .hc-description{font-size:16px}#material h2{font-size:clamp(40px,4.8vw,58px)}#material .hc-row{font-size:14px}#material .hc-stories{min-height:325px}}
+@media(max-width:767px){
+  #material .hc-stage{min-height:780px}
+  #material .hc-model{left:50%;top:31%;width:min(85vw,400px)}
+  #material .hc-copy{left:24px;right:24px;top:auto;bottom:60px;width:auto;max-width:none;transform:none}
+  #material .hc-kicker{font-size:10px;letter-spacing:.08em;margin-bottom:12px}
+  #material h2{font-size:clamp(34px,9vw,43px);line-height:1.02}
+  #material .hc-description{font-size:16px;line-height:1.6;margin:16px 0;max-width:48ch}
+  #material .hc-stories{min-height:260px}
+  #material .hc-detail{font-size:10px;letter-spacing:0}
+  #material .hc-row{min-height:42px;padding:11px 2px;font-size:14px;gap:12px}
+  #material .hc-caption{display:none}
+  #material .hc-skip{right:24px;bottom:20px;font-size:10px}
+  #material .hc-hint{top:65%;font-size:10px}
+  #material .hc-layer[data-layer="wood-veneer"]{--rest:-90}
+  #material .hc-layer[data-layer="bottom-sheet"]{--rest:119.7}
+}
+@media(prefers-reduced-motion:reduce){#material .hc-row,#material .hc-row i{transition:none}#material .hc-skip{display:none}}
+/* All three explanations remain in normal reading order without motion/scripts. */
+html:not(.hc-loading) #material:not(.hc-animated) .hc-stage{height:auto;min-height:100svh}
+html:not(.hc-loading) #material:not(.hc-animated) .hc-copy{position:relative;top:auto;transform:none;padding:120px 0 70px}
+html:not(.hc-loading) #material:not(.hc-animated) .hc-stories{min-height:0}
+html:not(.hc-loading) #material:not(.hc-animated) .hc-chapter{margin-bottom:35px}
+html:not(.hc-loading) #material:not(.hc-animated) .hc-model{top:470px}
+@media(max-width:767px){
+  html:not(.hc-loading) #material:not(.hc-animated) .hc-stage{display:flex;flex-direction:column;padding-top:90px}
+  html:not(.hc-loading) #material:not(.hc-animated) .hc-model{position:relative;top:auto;left:50%;transform:translateX(-50%);order:0;flex:none}
+  html:not(.hc-loading) #material:not(.hc-animated) .hc-copy{left:auto;right:auto;bottom:auto;padding:25px 24px 65px;order:1}
+}
+
+/* Shared editorial language with the preceding material study. */
+#material .hc-meta{position:absolute;inset:112px 4% auto;display:flex;justify-content:space-between;margin:0;font:400 12px/1.5 var(--m);letter-spacing:.1em;color:#71717d}
+#material .hc-row-note{margin-left:auto;font:400 11px/1.5 var(--m);color:#8d8793;white-space:nowrap}
+#material .hc-footnote{position:absolute;left:4%;bottom:30px;margin:0;font:400 12px/1.5 var(--m);letter-spacing:.1em;color:#77717e}
+@media(min-width:768px) and (max-height:760px){#material .hc-stories{min-height:300px}#material h2{font-size:40px}#material .hc-kicker{margin-bottom:14px}#material .hc-description{margin:16px 0;line-height:1.65}#material .hc-copy{top:56%}}
+@media(max-width:1100px){#material .hc-row-note{display:none}}
+@media(max-width:767px){#material .hc-meta{inset:100px 24px auto;font-size:10px}#material .hc-meta span{display:none}#material .hc-footnote{display:none}}

@@ -1,0 +1,26 @@
+FONT ATTRIBUTIONS
+Google Fonts: Manrope, Instrument Serif, IBM Plex Mono.
+SIL Open Font License 1.1: https://openfontlicense.org/
+Full Manrope OFL text: FONT-LICENSE.txt
+
+
+Copyright 2017 IBM Corp. All rights reserved.
+
+http://scripts.sil.org/OFL
+
+Copyright 2022 The Instrument Serif Project Authors (https://github.com/Instrument/instrument-serif)
+
+https://scripts.sil.org/OFL
+
+Copyright 2019 The Manrope Project Authors (https://github.com/googlefonts/manrope)
+
+https://openfontlicense.org
+
+
+GSAP 3.13.0 and ScrollTrigger, copyright GreenSock. License: https://gsap.com/standard-license/
+
+Source: https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/
+
+Original imagery and logo from the official INOX brochure and supplied reference HTML. No supplemental stock.
+
+Colour research: https://www.pantone.com/color-finder/19-2311-tcx and https://www.pantone.com/uk/en-gb/color-finder/20-0124-tpm. Digital palette is independently selected; no exact Pantone match or endorsement is claimed.

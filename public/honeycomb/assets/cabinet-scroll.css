@@ -1,0 +1,26 @@
+/* Progressive enhancement: the original open illustration is the static fallback. */
+.cabinet-motion{display:none}
+.cabinet-animated .dg>img{visibility:hidden}
+.cabinet-animated .cabinet-motion{display:block;position:absolute;inset:40px 0 25px;filter:drop-shadow(0 25px 20px #30242e25);pointer-events:none}
+.cabinet-motion .cabinet-body{position:absolute;inset:0;width:100%;height:100%;clip-path:polygon(var(--cabinet-body-left,35.62%) 12.8%,74.16% 0,100% 0,100% 100%,var(--cabinet-body-left,35.62%) 100%);filter:none}
+.cabinet-door{position:absolute;left:0;top:0;width:1881px;height:836px;transform-origin:0 0;will-change:transform}
+.cabinet-door svg{display:block;width:100%;height:100%;overflow:visible}
+.cabinet-animated .hs,.cabinet-animated .cabinet-guide{opacity:var(--cabinet-labels,0);visibility:hidden;pointer-events:none}
+.cabinet-revealed .hs,.cabinet-revealed .cabinet-guide{visibility:visible}
+.cabinet-revealed .hs{pointer-events:auto}
+.cabinet-revealed .hs[aria-pressed=true]{color:#fff}
+.cabinet-animated .construction-controls{opacity:var(--cabinet-labels,0);transition:none}
+.cabinet-animated:not(.cabinet-revealed) .stage-foot{color:var(--ink)}
+@media(max-width:860px){
+  #why .cabinet-animated .cabinet-motion{inset:30px 0 22px}
+  #why .cabinet-animated .construction-controls{padding:12px 16px}
+  #why .cabinet-animated .construction-controls>.tag{margin:0}
+  #why .cabinet-animated .tabs{display:flex;gap:12px;margin:4px 0 10px}
+  #why .cabinet-animated .tabs button{flex:1;gap:6px;min-height:58px;padding:8px 0;font-size:10px}
+  #why .cabinet-animated .tabs button i{display:none}
+  #why .cabinet-animated .construction-caption{min-height:0}
+  #why .cabinet-animated .construction-caption small{display:none}
+  #why .cabinet-animated #dgl{font-size:14px;margin:0 0 3px}
+  #why .cabinet-animated #part-context{margin:0;font-size:10px}
+  #why .cabinet-animated .construction-cta{margin-top:10px}
+}

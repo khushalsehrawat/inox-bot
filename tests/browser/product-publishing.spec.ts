@@ -1,0 +1,42 @@
+import { test, expect } from "@playwright/test";
+import { randomUUID } from "node:crypto";
+import sharp from "sharp";
+
+test("an existing local draft can upload its image, publish, survive reload and unpublish", async ({ page, context }) => {
+  const base = process.env.WEB_PRODUCT_TEST_URL;
+  test.skip(!base, "Run npm run test:web-admin for isolated publishing credentials and storage.");
+  const login = await context.request.post(`${base}/api/admin/session`, { headers: { Origin: base! }, data: { email: "website-admin@example.test", password: "Isolated-test-admin9!" } });
+  expect(login.ok()).toBeTruthy();
+  const cookie = login.headersArray().filter(h => h.name.toLowerCase() === "set-cookie").map(h => h.value).find(value => value.startsWith("inox_website_admin="))!;
+  await context.addCookies([{ name: "inox_website_admin", value: cookie.split(";")[0].slice("inox_website_admin=".length), domain: "127.0.0.1", path: "/api/admin", httpOnly: true, secure: false, sameSite: "Strict" }]);
+  const draft = { id: randomUUID(), sku: "BROWSER-PUBLISH-1", name: "Browser uploaded cabinet basket", category: "kitchen", description: "A real product uploaded through the admin editor.", status: "Draft", featured: false, webVisible: true, appVisible: false, finish: "Chrome", specifications: "Material: Stainless steel", images: ["old-filename-only.png"], pdf: "" };
+  await page.addInitScript(value => localStorage.setItem("inox-admin-drafts", JSON.stringify([value])), draft);
+  await page.goto(`${base}/admin`);
+  const row = page.getByRole("row").filter({ hasText: draft.name });
+  await expect(row.getByRole("button", { name: "Publish to website" })).toBeEnabled();
+  await row.getByRole("button", { name: "Publish to website" }).click();
+  await expect(page.locator(".form-error[role=alert]")).toContainText("Reselect the product images");
+  await row.getByRole("button", { name: "Edit", exact: true }).click();
+  const editor = page.locator(".product-editor");
+  // A tiny generated PNG fixture is converted to WebP by the upload API.
+  const png = await sharp({ create: { width: 12, height: 12, channels: 3, background: "#cc2222" } }).png().toBuffer();
+  await editor.locator('input[type=file][accept="image/png,image/jpeg,image/webp"]').setInputFiles({ name: "basket.png", mimeType: "image/png", buffer: png });
+  await expect(editor.getByRole("button", { name: "Publish to website", exact: true })).toBeEnabled();
+  await editor.getByRole("button", { name: "Publish to website", exact: true }).click();
+  await expect(editor).not.toBeVisible();
+  await expect(row).toContainText("Published");
+  await page.reload();
+  await expect(row.getByRole("button", { name: "Unpublish", exact: true })).toBeVisible();
+  await page.goto(`${base}/products`);
+  await expect(page.getByRole("heading", { name: draft.name })).toBeVisible();
+  await page.goto(`${base}/products/${draft.id}`);
+  await expect(page.getByRole("heading", { name: draft.name, exact: true })).toBeVisible();
+  await expect(page.getByText("Stainless steel", { exact: true })).toBeVisible();
+  await expect.poll(() => page.locator(".gallery-stage img").evaluate((img: HTMLImageElement) => img.complete && img.naturalWidth > 0)).toBeTruthy();
+  await page.goto(`${base}/enquiry`);
+  await page.goto(`${base}/admin`);
+  await row.getByRole("button", { name: "Unpublish", exact: true }).click();
+  await expect(row.getByRole("button", { name: "Publish", exact: true })).toBeVisible();
+  await page.goto(`${base}/products`);
+  await expect(page.getByRole("heading", { name: draft.name })).toHaveCount(0);
+});

@@ -1,0 +1,101 @@
+/* Architectural collections: warm metal, quiet typography, generous space. */
+.material-facade { --material-bg:#242522; --material-ink:#f1ece2; --material-muted:#bcb8ad; --material-accent:#c2a47a; --material-line:#ffffff26; }
+.material-xcomb { --material-bg:#e9e8e3; --material-ink:#2c302e; --material-muted:#626962; --material-accent:#8b2633; --material-line:#303b3026; }
+.material-preview,.material-experience { background:var(--material-bg); color:var(--material-ink); }
+.material-preview { padding:80px 0 30px; overflow:hidden; }
+.material-preview-grid { display:grid; grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr); align-items:center; gap:40px 70px; }
+.material-copy { padding-block:20px; }
+.material-kicker { display:block; font:500 10px/1.7 Arial,Helvetica,sans-serif; text-transform:uppercase; letter-spacing:.18em; color:var(--material-accent); }
+.material-copy h2,.material-hero h1 { font:400 clamp(68px,8vw,116px)/1 var(--serif); letter-spacing:-.06em; margin:24px 0; }
+.material-copy h2 > span,.material-hero h1 > span { display:block; font:400 clamp(25px,2.6vw,38px)/1.2 var(--serif); letter-spacing:-.03em; margin-top:18px; }
+.material-copy p,.material-hero-copy p { max-width:440px; font-size:14px; line-height:1.9; color:var(--material-muted); }
+.material-link { display:inline-flex; align-items:center; justify-content:space-between; gap:28px; min-height:48px; margin-top:28px; padding:10px 0; border:0; border-bottom:1px solid var(--material-accent); color:var(--material-ink); background:transparent; font:400 12px/1.5 Arial,Helvetica,sans-serif; cursor:pointer; }
+.material-link svg { transition:transform .3s; flex-shrink:0; }
+.material-link:hover svg { transform:translate(3px,-3px); }
+.material-link:focus-visible,.material-preview-art a:focus-visible,.material-other:focus-visible { outline:2px solid var(--material-accent); outline-offset:6px; }
+.material-preview-art { min-width:0; }
+.material-preview-art a { position:relative; display:block; overflow:hidden; }
+.material-preview-art img { display:block; width:100%; height:420px; object-fit:cover; transition:transform 1.2s cubic-bezier(.22,1,.36,1); }
+.material-preview-art a:hover img { transform:scale(1.045); }
+.material-xcomb .material-preview-art img { object-fit:contain; background:#d9d8d0; }
+.material-art-index { position:absolute; left:22px; bottom:22px; padding:8px 12px; background:#242522df; color:#fff; font-size:9px; letter-spacing:.12em; text-transform:uppercase; }
+.material-art-arrow { position:absolute; top:18px; right:18px; display:grid; place-items:center; width:42px; height:42px; border:1px solid #ffffff80; border-radius:50%; color:white; background:#24252280; }
+.material-words { grid-column:1 / -1; display:flex; flex-wrap:wrap; gap:20px 45px; justify-content:space-between; padding-top:22px; border-top:1px solid var(--material-line); color:var(--material-muted); text-transform:uppercase; font-size:9px; letter-spacing:.18em; }
+.material-experience { overflow:clip; }
+.material-hero { display:grid; grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr); gap:65px; padding-block:80px 35px; align-items:center; }
+.material-hero-copy { z-index:1; }
+.material-hero h1 { font-size:clamp(72px,10vw,150px); }
+.material-hero-art { position:relative; min-width:0; }
+.material-hero-art img { display:block; width:100%; height:clamp(340px,43vw,620px); object-fit:cover; }
+.material-xcomb .material-hero-art img { object-fit:contain; background:#d9d8d0; }
+.material-image-note { display:block; padding-top:15px; color:var(--material-muted); font-size:9px; text-transform:uppercase; letter-spacing:.13em; }
+.material-story { display:grid; grid-template-columns:1fr 1fr; gap:90px; padding-block:110px; scroll-margin-top:30px; }
+.material-story h2,.material-structure h2,.facade-study h2,.material-contact h2 { font:400 clamp(34px,4.3vw,62px)/1.12 var(--serif); letter-spacing:-.04em; margin-top:20px; }
+.material-story-heading { align-self:start; position:sticky; top:50px; }
+.material-detail { display:flex; align-items:baseline; gap:25px; padding:28px 0; border-top:1px solid var(--material-line); }
+.material-detail > span { font-size:10px; color:var(--material-accent); flex-shrink:0; }
+.material-detail h3 { font:400 24px/1.3 var(--serif); letter-spacing:-.02em; }
+.material-detail p { margin-top:12px; font-size:13px; line-height:1.9; color:var(--material-muted); }
+.material-structure,.facade-study { border-top:1px solid var(--material-line); padding-block:70px; text-align:center; }
+.layer-study { max-width:620px; margin:0 auto; }
+.layer-model { position:relative; height:330px; margin-top:45px; }
+.panel-layer { position:absolute; left:15%; top:115px; width:70%; height:100px; transform:skewY(-10deg); border:1px solid #778078; box-shadow:12px 16px 30px #2224; }
+.panel-layer-0 { background:linear-gradient(130deg,#dddcd5,#777e79); z-index:3; }
+.panel-layer-1 { background:radial-gradient(ellipse,#323b34 40%,#a8aea7 44%,#a8aea7 55%,#323b34 60%); background-size:22px 22px; height:70px; z-index:2; }
+.panel-layer-2 { background:linear-gradient(140deg,#aaa99e,#deddd5); z-index:1; }
+.panel-layer span { position:absolute; left:12px; top:12px; font-size:9px; padding:4px 9px; background:#eae9e0ed; color:#2c302e; opacity:0; transition:opacity .4s; }
+.is-expanded .panel-layer span { opacity:1; }
+.layer-study p { font-size:12px; line-height:1.8; color:var(--material-muted); margin:22px auto 10px; max-width:430px; }
+.layer-study small { font-size:9px; letter-spacing:.06em; color:var(--material-muted); }
+.facade-fins { display:flex; justify-content:center; gap:clamp(5px,1vw,16px); height:300px; margin-block:50px 30px; overflow:hidden; perspective:800px; }
+.facade-fins i { width:30px; height:100%; background:linear-gradient(90deg,#3b3b32,#b49c76 50%,#564c39); transform-origin:center; animation:facade-light 8s ease-in-out infinite alternate; }
+@keyframes facade-light { from { transform:rotateY(-35deg) skewY(-8deg); filter:brightness(.65); } to { transform:rotateY(35deg) skewY(8deg); filter:brightness(1.2); } }
+.facade-study p { max-width:480px; margin:auto; color:var(--material-muted); font-size:13px; line-height:1.9; }
+.material-contact { padding-block:75px 100px; border-top:1px solid var(--material-line); text-align:center; }
+.material-contact em,.facade-study em { font-weight:400; color:var(--material-accent); }
+.material-other { display:flex; justify-content:center; align-items:center; gap:12px; margin-top:35px; color:var(--material-muted); font-size:11px; }
+/* Homepage Facade typography, inspired by the architectural reference. */
+.material-preview.material-facade .material-copy { text-transform:uppercase; margin-left:50px; }
+.material-facade .material-hero-copy { text-transform:uppercase; }
+.material-preview.material-facade .material-copy h2,.material-facade .material-hero h1 { font-size:clamp(48px,6.5vw,96px); letter-spacing:-.045em; overflow-wrap:anywhere; margin-left:50px; }
+.material-preview.material-facade .material-copy h2 > .facade-building-title,.material-facade .material-hero h1 > .facade-building-title { margin-top:28px; font:300 clamp(28px,3.4vw,49px)/1.15 Arial,Helvetica,sans-serif; letter-spacing:.1em; color:#b68a52;}
+.facade-building-title strong { display:block; font-weight:700; letter-spacing:.065em; color:var(--material-ink);  }
+.material-preview.material-facade .material-copy p,.material-facade .material-hero-copy p { max-width:460px; font-size:10px; line-height:1.9; letter-spacing:.13em; color:var(--material-muted); margin-left:50px;}
+.material-preview.material-facade .material-link,.material-facade .material-hero .material-link { font-size:11px; letter-spacing:.12em; }
+/* Eight primary destinations need a compact desktop header and a tablet menu. */
+@media(min-width:1001px) { .header .desktop-nav { gap:clamp(12px,1.4vw,24px); white-space:nowrap; } .header { gap:20px; } }
+@media(min-width:1001px) and (max-width:1400px) { .header-cta { display:none; } .header-actions { gap:14px; } }
+@media(min-width:761px) and (max-width:1000px) {
+  .header .desktop-nav { display:none; }
+  .header .menu-button { display:flex; }
+  .header .mobile-navigation { display:block; position:absolute; top:100%; left:0; right:0; z-index:35; padding:24px; background:var(--bg); box-shadow:0 20px 30px #2b261b18; max-height:calc(100dvh - 110px); overflow-y:auto; }
+  .header .mobile-navigation a { display:block; padding:9px 0; font:26px/1.4 var(--serif); }
+  .header .mobile-navigation .mobile-collections a { display:flex; font:14px/1.5 Arial,Helvetica,sans-serif; }
+  .header .mobile-navigation a[aria-current="page"] { color:var(--red); }
+}
+@media(max-width:1000px) { .material-preview-grid,.material-hero { gap:35px; } .material-story { gap:45px; } .material-preview-art img { height:340px; } }
+@media(max-width:760px) {
+  .material-preview { padding:45px 0 25px; }
+  .material-preview-grid,.material-hero,.material-story { grid-template-columns:minmax(0,1fr); gap:28px; }
+  .material-copy { padding:0; }
+  .material-kicker { font-size:9px; letter-spacing:.12em; }
+  .material-copy h2 { font-size:68px; margin-block:20px; }
+  .material-copy h2 > span,.material-hero h1 > span { font-size:28px; }
+  .material-copy p,.material-hero-copy p { font-size:13px; }
+  .material-preview-art img { height:auto; min-height:230px; aspect-ratio:4 / 3; }
+  .material-words { gap:16px; font-size:8px; letter-spacing:.1em; }
+  .material-words > span:last-child:nth-child(4) { display:none; }
+  .material-art-index { left:12px; bottom:12px; font-size:8px; }
+  .material-hero { padding-block:45px 25px; }
+  .material-hero h1 { font-size:86px; }
+  .material-hero-art img { height:auto; aspect-ratio:4 / 3; }
+  .material-story { padding-block:60px; }
+  .material-story-heading { position:static; }
+  .material-detail { gap:18px; }
+  .material-structure,.facade-study { padding-block:50px; }
+  .layer-model { height:290px; margin-top:20px; }
+  .panel-layer { left:8%; width:84%; }
+  .facade-fins { height:220px; margin-top:35px; }
+  .material-contact { padding-block:55px 65px; }
+}
+@media(prefers-reduced-motion:reduce) { .facade-fins i { animation:none; } .material-preview-art img,.material-link svg,.panel-layer span { transition:none; } }

@@ -1,0 +1,54 @@
+{
+  "name": "inox-decor-web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --webpack --hostname 127.0.0.1",
+    "ask-inox:index": "node scripts/index-ask-inox.mjs",
+    "ask-inox:index:check": "node scripts/index-ask-inox.mjs --check",
+    "test:ask-inox:hostinger": "node scripts/check-ask-inox-standalone.mjs",
+    "prebuild": "npm run ask-inox:index:check",
+    "build": "next build --webpack",
+    "postbuild": "node scripts/prepare-standalone.mjs",
+    "start": "node hostinger-build/server.js",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test tests/*.test.mjs",
+    "test:browser": "playwright test",
+    "test:customers": "node scripts/test-customer-journey.mjs --browser",
+    "test:events": "node scripts/test-events-admin.mjs",
+    "test:taxonomy": "node scripts/test-web-taxonomy.mjs",
+    "test:web-admin": "node scripts/test-unified-catalogue.mjs",
+    "test:catalogue": "node scripts/test-unified-catalogue.mjs",
+    "test:mysql": "node scripts/test-website-mysql.mjs"
+  },
+  "dependencies": {
+    "@google/genai": "^3.6.1",
+    "exceljs": "^4.4.0",
+    "lucide-react": "^0.468.0",
+    "motion": "^14.5.0",
+    "mysql2": "^3.24.6",
+    "next": "^16.0.0",
+    "nodemailer": "^10.6.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "sharp": "^0.35.5"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.64.1",
+    "@tailwindcss/postcss": "^4.0.0",
+    "@types/node": "^22.0.0",
+    "@types/nodemailer": "^8.0.2",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "tailwindcss": "^4.0.0",
+    "typescript": "^5.7.0"
+  },
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "overrides": {
+    "exceljs": {
+      "uuid": "^11.1.1"
+    }
+  }
+}

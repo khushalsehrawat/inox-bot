@@ -1,0 +1,44 @@
+/* Every panel coordinate uses the original image's projection. Static defaults
+   are the complete presentation; JS only enables the scroll enhancement. */
+.pc-section{position:relative;color:#34323a;background:radial-gradient(ellipse at 65% 35%,#fafafa 0,transparent 65%),linear-gradient(125deg,#e9e9ed,#d9dce1);isolation:isolate}
+.pc-section .pc-stage{position:relative;height:100svh;min-height:680px;overflow:hidden}
+.pc-grid{position:absolute;inset:0;opacity:.035;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='104' height='180'%3E%3Cpath d='M52 0L104 30V90L52 120L0 90V30ZM52 120V180' fill='none' stroke='%23545868'/%3E%3C/svg%3E");pointer-events:none}
+.pc-meta{position:absolute;inset:112px 4% auto;display:flex;justify-content:space-between;font:400 12px/1.5 var(--m);letter-spacing:.1em;color:#71717d}
+.pc-product{position:absolute;left:73%;top:49%;width:46%;transform:translate(-50%,-50%);pointer-events:none}
+.pc-scene{display:block;width:100%;height:auto;overflow:visible}
+.pc-curl{display:none}
+.pc-hint{position:absolute;bottom:12%;left:73%;transform:translateX(-50%);text-align:center;width:46%}
+.pc-hint{font:400 12px/1.6 var(--m);letter-spacing:.15em;color:#71717b;visibility:hidden}
+.pc-copy{position:absolute;left:5%;top:50%;transform:translateY(-50%);width:35%;max-width:460px}
+.pc-eyebrow{font:400 12px/1.5 var(--m);letter-spacing:.12em;color:#77727e;margin:0 0 24px}
+.pc-copy h2{font:400 clamp(38px,3.7vw,66px)/1.08 var(--d);letter-spacing:-.045em;margin:0}
+.pc-copy h2 em{font-family:'Instrument Serif',Georgia,serif;color:#8b7a94;font-weight:400;letter-spacing:-.025em}
+.pc-description{font:400 16px/1.8 var(--d);color:#686570;margin:24px 0 28px;max-width:40ch}
+.pc-rows{display:grid;border-top:1px solid #51485c25}
+.pc-rows button{appearance:none;border:0;border-bottom:1px solid #51485c25;background:none;display:flex;align-items:center;gap:15px;padding:17px 0;text-align:left;font:400 14px/1.4 var(--d);color:#79737f;cursor:pointer}
+.pc-rows i{width:6px;height:6px;border:1px solid #9a8ba2;border-radius:50%;flex:none}
+.pc-rows [aria-current]{color:#38313f}.pc-rows [aria-current] i{background:#93809f}
+.pc-rows button:focus-visible,.pc-footer a:focus-visible{outline:2px solid #887194;outline-offset:5px}
+.pc-footer{position:absolute;bottom:30px;left:4%;right:4%;display:flex;align-items:center;gap:28px;font:400 12px/1.6 var(--m);color:#726c7b}
+.pc-state{min-width:160px;letter-spacing:.08em}
+.pc-progress{height:1px;flex:1;background:#51485c20}.pc-progress span{display:block;height:100%;background:#93809f;transform-origin:left}
+.pc-footer a{color:inherit;text-decoration:none;border-bottom:1px solid #93809f66;padding-bottom:3px}
+/* Non-animated (including failed scripts/assets): fully closed product + copy. */
+.pc-section:not(.pc-animated) .pc-stage{height:auto;min-height:800px}
+.pc-section:not(.pc-animated) .pc-copy{position:relative;top:auto;transform:none;padding:200px 0 100px}
+@media(max-width:767px){
+ .pc-section .pc-stage{min-height:700px}
+ .pc-meta{inset:100px 24px auto;font-size:10px}.pc-meta span{display:none}
+ .pc-product{width:78%;left:50%;top:29%}
+ .pc-copy{left:24px;right:24px;width:auto;max-width:none;top:auto;bottom:68px;transform:none}
+ .pc-eyebrow{font-size:11px;margin-bottom:14px}
+ .pc-copy h2{font-size:clamp(30px,8vw,43px)}
+ .pc-description{font-size:16px;line-height:1.55;margin:16px 0}
+ .pc-rows button{padding:12px 0;font-size:14px}
+ .pc-footer{left:24px;right:24px;bottom:22px;gap:16px;font-size:10px}.pc-state{min-width:0}.pc-progress{display:none}.pc-footer a{margin-left:auto}
+ .pc-hint{display:none}
+ .pc-section:not(.pc-animated) .pc-stage{min-height:0;padding-top:135px}
+ .pc-section:not(.pc-animated) .pc-product{position:relative;top:auto;left:50%;transform:translateX(-50%)}
+ .pc-section:not(.pc-animated) .pc-copy{left:auto;right:auto;bottom:auto;padding:0 24px 95px}
+}
+@media(min-width:768px) and (max-height:760px){.pc-meta{top:100px}.pc-copy h2{font-size:40px}.pc-description{margin:18px 0}.pc-copy{top:53%}.pc-product{top:53%}}

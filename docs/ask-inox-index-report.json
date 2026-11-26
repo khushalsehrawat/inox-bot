@@ -1,0 +1,112 @@
+{
+  "sources": [
+    {
+      "title": "About INOX",
+      "status": "indexed",
+      "characters": 471
+    },
+    {
+      "title": "Contact INOX",
+      "status": "indexed",
+      "characters": 207
+    },
+    {
+      "title": "INOX catalogues",
+      "status": "indexed",
+      "characters": 194
+    },
+    {
+      "title": "XCOMB aluminium honeycomb panels",
+      "status": "indexed",
+      "characters": 702
+    },
+    {
+      "title": "INOX Facade",
+      "status": "indexed",
+      "characters": 528
+    },
+    {
+      "title": "Honeycomb public experience",
+      "status": "indexed",
+      "characters": 4609
+    },
+    {
+      "title": "Supplied legacy INOX catalogue",
+      "status": "manual-review",
+      "pages": 44,
+      "indexedPages": [],
+      "needsOCR": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44
+      ],
+      "excludedForPricingOrPrivateText": []
+    },
+    {
+      "title": "XCOMB dedicated brochure",
+      "status": "unavailable",
+      "reason": "No separately approved source supplied."
+    },
+    {
+      "title": "Facade dedicated brochure",
+      "status": "unavailable",
+      "reason": "No separately approved source supplied."
+    },
+    {
+      "title": "INOX privacy policy",
+      "status": "indexed",
+      "characters": 3102
+    },
+    {
+      "title": "INOX home",
+      "status": "indexed",
+      "characters": 1034
+    },
+    {
+      "title": "Product enquiry process",
+      "status": "indexed",
+      "characters": 278
+    }
+  ]
+}

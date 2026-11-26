@@ -1,0 +1,78 @@
+{
+  "sources": [
+    {
+      "title": "About INOX",
+      "href": "/about",
+      "path": "src/app/about/page.tsx",
+      "approved": true
+    },
+    {
+      "title": "Contact INOX",
+      "href": "/contact",
+      "path": "src/app/contact/page.tsx",
+      "approved": true
+    },
+    {
+      "title": "INOX catalogues",
+      "href": "/catalogues",
+      "path": "src/components/catalogue-downloads.tsx",
+      "approved": true
+    },
+    {
+      "title": "XCOMB aluminium honeycomb panels",
+      "href": "/xcomb",
+      "path": "src/components/architectural-collections.tsx",
+      "collection": "xcomb",
+      "approved": true
+    },
+    {
+      "title": "INOX Facade",
+      "href": "/facade",
+      "path": "src/components/architectural-collections.tsx",
+      "collection": "facade",
+      "approved": true
+    },
+    {
+      "title": "Honeycomb public experience",
+      "href": "/honeycomb",
+      "path": "public/honeycomb/index.html",
+      "approved": true
+    },
+    {
+      "title": "Supplied legacy INOX catalogue",
+      "href": "/media/collection.pdf",
+      "path": "public/media/collection.pdf",
+      "approved": true
+    },
+    {
+      "title": "XCOMB dedicated brochure",
+      "href": "/catalogues",
+      "path": null,
+      "approved": false
+    },
+    {
+      "title": "Facade dedicated brochure",
+      "href": "/catalogues",
+      "path": null,
+      "approved": false
+    },
+    {
+      "title": "INOX privacy policy",
+      "href": "/privacy",
+      "path": "src/app/privacy/page.tsx",
+      "approved": true
+    },
+    {
+      "title": "INOX home",
+      "href": "/",
+      "path": "src/app/page.tsx",
+      "approved": true
+    },
+    {
+      "title": "Product enquiry process",
+      "href": "/enquiry",
+      "path": "src/components/enquiry-form.tsx",
+      "approved": true
+    }
+  ]
+}
