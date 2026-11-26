@@ -9,11 +9,11 @@
     "public/honeycomb/index.html": "e30e29d0abecbaa1ca7931305e131e528d9e9168380f643af6104d9fd9133da8",
     "public/media/collection.pdf": "594e5073eb3892ee234544bfd3cab99085bef680d6ba769505374dab7f0b59d0",
     "src/app/privacy/page.tsx": "443b4e99a6f77bd104773660f2228e6c5efba3e9edffd14ce256020b6a87db58",
-    "src/app/page.tsx": "6306c33991be9b78b93b025d130d9bf846e131df72194e98c017fb14863b9dbe",
+    "src/app/page.tsx": "1ac2eb0a241cbd8336327496b0c996a6c93eebba60d0acb2d4582de15f310b95",
     "src/components/enquiry-form.tsx": "b9fe92bec48f991b65133f2a829b11c3783250ad038984c42d471b39865de4db",
-    "src/app/products/page.tsx": "8690095f88e7888c6806fcd381493f536127e80eabb61655bb3e95d7dc76974d",
+    "src/app/products/page.tsx": "448f35b43b7c07e47e29afec0dd85641667c2934559e382eec5b37da5ed22b26",
     "src/app/catalogues/page.tsx": "93fc0fcbd776bdafce2b18f88e1d9e452eba17a36e54cff5dbf792a452a841c4",
-    "src/app/blog/page.tsx": "792a24545cc64f58ca330183f6bd14c79fcb6e8f822566d1bfa541027a536a88",
+    "src/app/blog/page.tsx": "fed85834f23938d3e83119d86691a165ae4c2b367a20a6c9542a701edca1597e",
     "src/components/site-shell.tsx": "99ba005086fd7b8410337b44911fd8757687582170cfcfcde4b57fe9c78ec05c",
     "src/components/home-events.tsx": "3ae9a548ab9a68af187927e0235ed580f8924e564718b23003334fc6e4194f26"
   },
@@ -96,7 +96,7 @@
     {
       "title": "Product browsing and comparison",
       "href": "/products",
-      "text": "Explore INOX interior solutions and select products for your project enquiry. Home Products The INOX collection Products, precisely considered. Explore architectural hardware, fittings and accessories for your project."
+      "text": "Explore INOX interior solutions and select products for your project enquiry. Home Products The INOX collection Products, precisely considered. Explore architectural hardware, fittings and accessories for your project. We cannot load the live catalogue right now. Please try again shortly or contact INOX . No product availability has been verified."
     },
     {
       "title": "Catalogue download guidance",
@@ -106,7 +106,7 @@
     {
       "title": "INOX journal introduction",
       "href": "/blog",
-      "text": "Thoughtful advice on kitchen hardware, cabinet fittings and the details that make everyday spaces work beautifully. The INOX journal / Blog Better spaces. By design. Ideas, practical guides and a closer look at the details that make everyday living feel effortless. Latest stories articles / Hardware & everyday living Read the story Considered details. Everyday difference. Good design is in the things you use every day. Explore collections"
+      "text": "Thoughtful advice on kitchen hardware, cabinet fittings and the details that make everyday spaces work beautifully. The INOX journal / Blog Better spaces. By design. Ideas, practical guides and a closer look at the details that make everyday living feel effortless. Latest stories articles / Hardware & everyday living Journal articles are temporarily unavailable. Please try again shortly. Read the story Considered details. Everyday difference. Good design is in the things you use every day. Explore collections"
     },
     {
       "title": "Public footer and contact links",

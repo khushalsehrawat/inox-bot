@@ -17,7 +17,8 @@ const globalState=globalThis as typeof globalThis & { askInoxState?:State };
 const state=globalState.askInoxState ||= {sessions:new Map(),limits:new Map()};
 const cookie="inox_ask_session";
 const headers={"Cache-Control":"private, no-store", "Vary":"Cookie", "X-Content-Type-Options":"nosniff"};
-export const askEnabled=()=>process.env.ASK_INOX_ENABLED === "true";
+export { askInoxEnabled as askEnabled } from "./ask-inox-enabled";
+import { askInoxEnabled as askEnabled } from "./ask-inox-enabled";
 export class AskError extends Error { constructor(public status:number,message:string){super(message);} }
 const hash=(s:string)=>createHash("sha256").update(s).digest("hex");
 function limit(key:string,max:number,window=60_000) {

@@ -3,7 +3,8 @@ import Script from "next/script";
 import { SiteShell } from "@/components/site-shell";
 import "./globals.css";
 import "./materials.css";
-import { getPublicWebCategories } from "@/lib/web-taxonomy";
+import { publicCategories } from "@/lib/public-site";
+import { askInoxEnabled } from "@/lib/ask-inox-enabled";
 import { WebTaxonomyProvider } from "@/components/web-taxonomy-provider";
 export const dynamic = "force-dynamic";
 export const metadata: Metadata = {
@@ -27,6 +28,7 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const catalogue = await publicCategories();
   return (
     <html lang="en" data-scroll-behavior="smooth">
       <body>
@@ -40,8 +42,8 @@ export default async function RootLayout({
           src="https://www.googletagmanager.com/gtm.js?id=GTM-WZTSLDZQ"
           strategy="afterInteractive"
         />
-        <WebTaxonomyProvider initialCategories={await getPublicWebCategories()}>
-          <SiteShell askInoxEnabled={process.env.ASK_INOX_ENABLED === "true"}>{children}</SiteShell>
+        <WebTaxonomyProvider initialCategories={catalogue.data}>
+          <SiteShell askInoxEnabled={askInoxEnabled()}>{!catalogue.available && <aside role="status" className="wrap" style={{padding:"12px 20px"}}>The live catalogue is temporarily unavailable. Ask INOX can still help with our brand and public website information.</aside>}{children}</SiteShell>
         </WebTaxonomyProvider>
       </body>
     </html>

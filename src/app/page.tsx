@@ -11,7 +11,9 @@ import {
   MapPin,
   Globe,
 } from "lucide-react";
-import { getPublicWebCategories } from "@/lib/web-taxonomy";
+import { publicCategories } from "@/lib/public-site";
+import { publicRead } from "@/lib/public-read";
+import { homeImages } from "@/lib/home-images";
 import { Picture, ProjectCTA } from "@/components/ui";
 import { HeroStage, Reveal, ParallaxImage } from "@/components/motion-system";
 import { HomeEvents } from "@/components/home-events";
@@ -21,9 +23,10 @@ import { CollectionSlider } from "@/components/collection-slider";
 
 export default async function Home() {
   await connection();
-  const images = await getHomeImages();
+  const [imageResult, categoryResult, eventResult] = await Promise.all([publicRead(getHomeImages,homeImages),publicCategories(),publicRead(getEventAlbums,[])]);
+  const images = imageResult.data;
   const image = (id: string) => images.find(item => item.id === id)!;
-  const categories = (await getPublicWebCategories())
+  const categories = categoryResult.data
     .filter(c => !c.parentId)
     .map(c => {
       const framing = images.find(item => item.id === `collection-${c.id}`);
@@ -175,7 +178,7 @@ export default async function Home() {
           />
         </ParallaxImage>
       </section>
-      <HomeEvents albums={await getEventAlbums()} />
+      {eventResult.available && eventResult.data.length>0 && <HomeEvents albums={eventResult.data} />}
       <section className="catalogue-feature">
         <div className="wrap catalogue-feature-inner">
           <Reveal className="catalogue-art" kind="image">
