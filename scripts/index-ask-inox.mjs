@@ -7,13 +7,14 @@ import ts from 'typescript';
 const root = process.cwd();
 const manifestBytes = await fs.readFile('ask-inox.sources.json','utf8');
 const manifest = JSON.parse(manifestBytes);
-const hash = value => createHash('sha256').update(value).digest('hex');
+// Canonical text hashes survive Git line-ending conversion; binary PDFs stay exact.
+const hash = (value, binary = false) => createHash('sha256').update(binary ? value : value.toString().replace(/\r\n/g, '\n')).digest('hex');
 const privateText = /price|pricing|mrp|selling price|dealer|wholesale|confidential|internal only|₹|\bINR\b|\bRs\.?\s*\d/i;
 const signatures = { 'ask-inox.sources.json': hash(manifestBytes) };
 for (const source of manifest.sources.filter(s => s.path)) {
   const path = resolve(root,source.path);
   if (relative(root,path).startsWith('..')) throw new Error('Source must be inside checkout.');
-  try { signatures[source.path] = hash(await fs.readFile(path)); } catch { signatures[source.path] = 'unavailable'; }
+  try { signatures[source.path] = hash(await fs.readFile(path), /\.pdf$/i.test(path)); } catch { signatures[source.path] = 'unavailable'; }
 }
 const destination = 'src/lib/ask-inox-documents.json';
 if (process.argv.includes('--check')) {

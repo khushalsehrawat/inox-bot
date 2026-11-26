@@ -1,16 +1,16 @@
 {
   "version": 1,
   "signatures": {
-    "ask-inox.sources.json": "b92dd085f9d98355055dff9a31b9f850bfb491a099d9738353c2bb29c6334c54",
+    "ask-inox.sources.json": "1aba70531af3f75d02dafa6ad8483abee4cb1ebdc22bc349eaaae27336a8d68d",
     "src/app/about/page.tsx": "9cdf69667da2ae9dc5669f7769241b2ad0617a6b5ade7dfa74d3f637985b2f87",
     "src/app/contact/page.tsx": "348c774b916fbf7bf7f5d188d34261d31d932aa9773950cabc15ad7bc5b1c2d9",
     "src/components/catalogue-downloads.tsx": "4027c248dc3287590e070cc635042c36c993e68b69fbefedaaeffa9a90d9a1b1",
-    "src/components/architectural-collections.tsx": "939d6f744c36e0c3f375d4b68c7bbde8b90694d1e60d9ff6b39e5c80d4578737",
-    "public/honeycomb/index.html": "e4c03cca80503877c1fab2da2d86fbbbb67428875d91bf0e12fe37f3c857a9ad",
+    "src/components/architectural-collections.tsx": "046802eca6cbaa4a9208fdb56fb5ac20277355b10b95486d62f18a0538839460",
+    "public/honeycomb/index.html": "e30e29d0abecbaa1ca7931305e131e528d9e9168380f643af6104d9fd9133da8",
     "public/media/collection.pdf": "594e5073eb3892ee234544bfd3cab99085bef680d6ba769505374dab7f0b59d0",
     "src/app/privacy/page.tsx": "443b4e99a6f77bd104773660f2228e6c5efba3e9edffd14ce256020b6a87db58",
-    "src/app/page.tsx": "17a91be52298f7145e3f38a57ec24df3a279e75c96cf4d5ee1dda5eec8a7028b",
-    "src/components/enquiry-form.tsx": "3b90c64cfcdf47ebc505c0860347794b857165d42b04037253e9c87dd1d37035"
+    "src/app/page.tsx": "6306c33991be9b78b93b025d130d9bf846e131df72194e98c017fb14863b9dbe",
+    "src/components/enquiry-form.tsx": "b9fe92bec48f991b65133f2a829b11c3783250ad038984c42d471b39865de4db"
   },
   "chunks": [
     {
