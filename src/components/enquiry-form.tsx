@@ -178,7 +178,7 @@ export function EnquiryForm({ basket = false, products = referenceProducts }: { 
           {user ? "Your submitted enquiry will be saved to your INOX account, so you can revisit it on any device." : <>Your enquiry will reach our team. <Link className="text-link" href="/login?next=%2Fenquiry">Sign in</Link> before sending to also save it to your account.</>}
         </p>
         <div className="form-actions">
-          <button className="button dark" disabled={busy || !ready}>
+          <button className="button dark" disabled={busy || !ready || items.some(item=>item.id.startsWith("demo-product-"))}>
             {busy ? "Sending…" : "Send enquiry"}
             <ArrowRight size={16} />
           </button>

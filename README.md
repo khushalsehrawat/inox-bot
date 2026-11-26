@@ -23,3 +23,9 @@ Open `/api/ask-inox/health` after deployment. It reports the feature flag, wheth
 Public home, product listing, journal listing and shared layout now remain accessible during a catalogue outage. The site displays an unavailable notice and does not replace live products with fixtures. Brand questions can still retrieve approved public text. Live product lookup still requires a reachable configured MySQL catalogue. Database errors on admin or write operations are not suppressed.
 
 Run `node scripts/check-vercel-public.mjs` after `npm run build` to smoke-test production pages and public knowledge lookup with database/provider credentials removed. It makes no provider calls and sends no enquiries.
+
+## Ten demo products
+
+When running this preview on Vercel with no WEB_MYSQL connection settings, 10 clearly labelled synthetic products (20 variants) are available automatically. Set ASK_INOX_DEMO_PRODUCTS=false to disable them. Configuring any database connection setting disables the automatic demo, so an incomplete real database configuration is never hidden. Demo data is not inserted into MySQL. Product details, lookup, navigation, variant confirmation and local enquiry review use the existing services. Demo submissions are blocked. Images are representative category images; specs are illustrative. No warranties, real stock or prices are supplied.
+
+Try DEMO.01.101 (black bottle rack), DEMO.01.102 (chrome), or ask for a shoe rack. Test with `node scripts/check-vercel-public.mjs --demo` after building.

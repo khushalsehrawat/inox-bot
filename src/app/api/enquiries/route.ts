@@ -1,3 +1,4 @@
+import { demoCatalogueEnabled } from "@/lib/ask-inox-demo-products";
 import { isSameOrigin } from "@/lib/request";
 import { NextRequest, NextResponse } from "next/server";
 import { getWebProducts } from "@/lib/web-taxonomy";
@@ -8,6 +9,7 @@ import { customerSession } from "@/lib/website-customers";
 import { limitedBody } from "@/lib/web-admin";
 import { notifySavedEnquiry } from "@/lib/enquiry-mail.mjs";
 export async function POST(req: NextRequest) {
+  if(demoCatalogueEnabled())return NextResponse.json({message:"Demo products can be reviewed in your enquiry, but demo enquiries cannot be submitted."},{status:409});
   if (!isSameOrigin(req))
     return NextResponse.json(
       { message: "Invalid request origin." },

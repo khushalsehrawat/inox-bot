@@ -1,7 +1,8 @@
 import "server-only";
+import { demoCatalogueEnabled } from "./ask-inox-demo-products";
 import { createHash, randomBytes } from "node:crypto";
 import { NextRequest, NextResponse } from "next/server";
-import { getAllWebProducts, withTaxonomy } from "./web-taxonomy";
+import { getAllWebProducts, getPublicWebCategories, withTaxonomy } from "./web-taxonomy";
 import { getBlogPosts } from "./blog-store";
 import { categoryPath } from "./category-tree.mjs";
 import { isSameOrigin } from "./request";
@@ -76,7 +77,7 @@ export function setContext(s:Session,body:Record<string,unknown>) {
 export async function lookup(s:Session,query:string):Promise<AskLookup> {
   limit(`lookup:${s.id}`,40);limit("lookup-global",120);
   // Deliberately bypass the website's 60-second catalogue cache for every assistant lookup.
-  const catalogue=await Promise.allSettled([getAllWebProducts(true),withTaxonomy(store=>store.list(true))]);
+  const catalogue=await Promise.allSettled([getAllWebProducts(true),getPublicWebCategories()]);
   const products=catalogue[0].status==="fulfilled"?catalogue[0].value:[];
   const categories=catalogue[1].status==="fulfilled"?catalogue[1].value:[];
   const catalogueAvailable=catalogue.every(result=>result.status==="fulfilled");
@@ -92,6 +93,7 @@ export async function lookup(s:Session,query:string):Promise<AskLookup> {
   }catch{result.notice+=" Published blog content is temporarily unavailable.";}
   result.sources=searchSources(sources.filter(s=>s.text),query);
   if(!result.products.length && result.sources.length && catalogueAvailable)result.notice="Verified public website excerpts found. Answer brand/site questions from these sources; no product match is required. Product facts still require live catalogue verification.";
+  if(demoCatalogueEnabled())result.notice="DEMO CATALOGUE: these are synthetic test products, not verified real INOX products. Explicitly say demo when discussing their illustrative specs. Do not claim stock, pricing, warranty or real compatibility. Enquiry review works, but submission is disabled.";
   s.discussed=[...new Set([...result.products.map(p=>p.id),...s.discussed])].slice(0,8);
   return result;
 }
@@ -110,7 +112,7 @@ export async function navigate(s:Session,destination:string):Promise<NavigationR
   limit(`navigate:${s.id}`,20);limit("navigate-global",120);
   const fixed=resolveNavigation(destination,[],[]);
   if(fixed.navigation || fixed.blocked){s.navigationChoices=undefined;return fixed;}
-  const [categories,products]=await Promise.all([withTaxonomy(store=>store.list(true)),getAllWebProducts(true)]);
+  const [categories,products]=await Promise.all([getPublicWebCategories(),getAllWebProducts(true)]);
   let posts:Awaited<ReturnType<typeof getBlogPosts>>=[];
   try{posts=await getBlogPosts(true);}catch{/* Product and category navigation do not depend on blog availability. */}
   const result=resolveNavigation(destination,categories,products,s.context || (s.discussed.length===1?s.discussed[0]:undefined),posts);

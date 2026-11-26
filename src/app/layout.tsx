@@ -1,3 +1,4 @@
+import { demoCatalogueEnabled } from "@/lib/ask-inox-demo-products";
 import type { Metadata } from "next";
 import Script from "next/script";
 import { SiteShell } from "@/components/site-shell";
@@ -43,7 +44,7 @@ export default async function RootLayout({
           strategy="afterInteractive"
         />
         <WebTaxonomyProvider initialCategories={catalogue.data}>
-          <SiteShell askInoxEnabled={askInoxEnabled()}>{!catalogue.available && <aside role="status" className="wrap" style={{padding:"12px 20px"}}>The live catalogue is temporarily unavailable. Ask INOX can still help with our brand and public website information.</aside>}{children}</SiteShell>
+          <SiteShell askInoxEnabled={askInoxEnabled()}>{demoCatalogueEnabled() && <aside role="status" className="wrap" style={{padding:"12px 20px"}}>Demo catalogue: 10 synthetic test products. Images and specifications are illustrative. Enquiry submission is disabled.</aside>}{!catalogue.available && <aside role="status" className="wrap" style={{padding:"12px 20px"}}>The live catalogue is temporarily unavailable. Ask INOX can still help with our brand and public website information.</aside>}{children}</SiteShell>
         </WebTaxonomyProvider>
       </body>
     </html>
