@@ -73,6 +73,36 @@
       "href": "/enquiry",
       "path": "src/components/enquiry-form.tsx",
       "approved": true
+    },
+    {
+      "title": "Product browsing and comparison",
+      "href": "/products",
+      "path": "src/app/products/page.tsx",
+      "approved": true
+    },
+    {
+      "title": "Catalogue download guidance",
+      "href": "/catalogues",
+      "path": "src/app/catalogues/page.tsx",
+      "approved": true
+    },
+    {
+      "title": "INOX journal introduction",
+      "href": "/blog",
+      "path": "src/app/blog/page.tsx",
+      "approved": true
+    },
+    {
+      "title": "Public footer and contact links",
+      "href": "/",
+      "path": "src/components/site-shell.tsx",
+      "approved": true
+    },
+    {
+      "title": "Design events introduction",
+      "href": "/",
+      "path": "src/components/home-events.tsx",
+      "approved": true
     }
   ]
 }

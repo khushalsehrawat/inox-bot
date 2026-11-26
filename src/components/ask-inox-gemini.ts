@@ -64,7 +64,7 @@ export async function connectGemini(o:Options):Promise<GeminiVoice> {
     if(content?.turnComplete){
       if(inputText)void o.request("remember",{text:inputText}).catch(()=>{});
       if(outputText && grounded)void o.request("remember",{role:"assistant",text:outputText}).catch(()=>{});
-      if(!grounded)o.message("assistant","Please share a product name or SKU so I can verify the current catalogue before answering.",`${turnId}-assistant`);
+      if(!grounded)o.message("assistant","Please repeat the question or type it so I can check the INOX website and catalogue.",`${turnId}-assistant`);
       grounded=false;inputText="";outputText="";turnId=crypto.randomUUID();turnComplete=true;if(drained)o.state("listening");
     }
   }

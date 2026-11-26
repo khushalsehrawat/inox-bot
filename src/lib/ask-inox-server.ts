@@ -75,9 +75,13 @@ export function setContext(s:Session,body:Record<string,unknown>) {
 export async function lookup(s:Session,query:string):Promise<AskLookup> {
   limit(`lookup:${s.id}`,40);limit("lookup-global",120);
   // Deliberately bypass the website's 60-second catalogue cache for every assistant lookup.
-  const [products,categories]=await Promise.all([getAllWebProducts(true),withTaxonomy(store=>store.list(true))]);
+  const catalogue=await Promise.allSettled([getAllWebProducts(true),withTaxonomy(store=>store.list(true))]);
+  const products=catalogue[0].status==="fulfilled"?catalogue[0].value:[];
+  const categories=catalogue[1].status==="fulfilled"?catalogue[1].value:[];
+  const catalogueAvailable=catalogue.every(result=>result.status==="fulfilled");
   const categoryNames=Object.fromEntries(categories.map(c=>[c.id,categoryPath(categories,c.id).map(c=>c.name).join(" ")]));
   const result=searchCatalogue(products,query,s.context,s.discussed,categoryNames);
+  if(!catalogueAvailable)result.notice="Live catalogue unavailable. Do not make product claims. Public website excerpts below can still answer brand and site questions.";
   const pageProduct=products.find(p=>p.id===s.context);
   if(pageProduct)result.pageContext={productId:pageProduct.id,...(pageProduct.variations?.some(v=>v.id===s.variant)?{variationId:s.variant}:{})};
   const sources=[...documentIndex.chunks,...categories.map(c=>({title:c.name,href:`/products?category=${encodeURIComponent(c.id)}`,text:publicText(c.description)}))];
@@ -86,6 +90,7 @@ export async function lookup(s:Session,query:string):Promise<AskLookup> {
     for(const post of posts)for(const section of post.sections)sources.push({title:`${publicText(post.title,240)} Â· ${publicText(section.title,240)}`,href:`/blog/${encodeURIComponent(post.slug)}#${encodeURIComponent(section.id)}`,text:publicText(section.text,1400)});
   }catch{result.notice+=" Published blog content is temporarily unavailable.";}
   result.sources=searchSources(sources.filter(s=>s.text),query);
+  if(!result.products.length && result.sources.length && catalogueAvailable)result.notice="Verified public website excerpts found. Answer brand/site questions from these sources; no product match is required. Product facts still require live catalogue verification.";
   s.discussed=[...new Set([...result.products.map(p=>p.id),...s.discussed])].slice(0,8);
   return result;
 }

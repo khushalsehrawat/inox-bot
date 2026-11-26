@@ -1,7 +1,7 @@
 {
   "version": 1,
   "signatures": {
-    "ask-inox.sources.json": "1aba70531af3f75d02dafa6ad8483abee4cb1ebdc22bc349eaaae27336a8d68d",
+    "ask-inox.sources.json": "4d0929dad7b2136ea5b8ede853980fb0c5ffbb8c27e86f8c082633fc566e7de6",
     "src/app/about/page.tsx": "9cdf69667da2ae9dc5669f7769241b2ad0617a6b5ade7dfa74d3f637985b2f87",
     "src/app/contact/page.tsx": "348c774b916fbf7bf7f5d188d34261d31d932aa9773950cabc15ad7bc5b1c2d9",
     "src/components/catalogue-downloads.tsx": "4027c248dc3287590e070cc635042c36c993e68b69fbefedaaeffa9a90d9a1b1",
@@ -10,33 +10,38 @@
     "public/media/collection.pdf": "594e5073eb3892ee234544bfd3cab99085bef680d6ba769505374dab7f0b59d0",
     "src/app/privacy/page.tsx": "443b4e99a6f77bd104773660f2228e6c5efba3e9edffd14ce256020b6a87db58",
     "src/app/page.tsx": "6306c33991be9b78b93b025d130d9bf846e131df72194e98c017fb14863b9dbe",
-    "src/components/enquiry-form.tsx": "b9fe92bec48f991b65133f2a829b11c3783250ad038984c42d471b39865de4db"
+    "src/components/enquiry-form.tsx": "b9fe92bec48f991b65133f2a829b11c3783250ad038984c42d471b39865de4db",
+    "src/app/products/page.tsx": "8690095f88e7888c6806fcd381493f536127e80eabb61655bb3e95d7dc76974d",
+    "src/app/catalogues/page.tsx": "93fc0fcbd776bdafce2b18f88e1d9e452eba17a36e54cff5dbf792a452a841c4",
+    "src/app/blog/page.tsx": "792a24545cc64f58ca330183f6bd14c79fcb6e8f822566d1bfa541027a536a88",
+    "src/components/site-shell.tsx": "99ba005086fd7b8410337b44911fd8757687582170cfcfcde4b57fe9c78ec05c",
+    "src/components/home-events.tsx": "3ae9a548ab9a68af187927e0235ed580f8924e564718b23003334fc6e4194f26"
   },
   "chunks": [
     {
       "title": "About INOX",
       "href": "/about",
-      "text": "Discover INOX interior solutions, kitchen hardware and architectural fittings. is a trusted name in premium fittings, hardware and interior solutions for modern living. We create thoughtfully engineered products that bring function, durability and refined design to kitchens, wardrobes and everyday spaces. With a focus on quality, innovation and long-term performance, helps shape interiors that work beautifully every day. Explore our solutions Purpose in every detail."
+      "text": "Discover INOX interior solutions, kitchen hardware and architectural fittings. About INOX Who we are. INOX is a trusted name in premium fittings, hardware and interior solutions for modern living. We create thoughtfully engineered products that bring function, durability and refined design to kitchens, wardrobes and everyday spaces. With a focus on quality, innovation and long-term performance, INOX helps shape interiors that work beautifully every day. Explore our solutions Our approach Purpose in every detail. Thoughtful function Fittings that make the most of your space and simplify the everyday. Considered design Materials, proportions and details that belong together. A shared vision Working with designers, architects and partners to bring spaces to life."
     },
     {
       "title": "Contact INOX",
       "href": "/contact",
-      "text": "Start a conversation with INOX about your next interior project. Verified business address, contact number and opening hours are pending brand confirmation. No unverified WhatsApp or map links are published."
+      "text": "Start a conversation with INOX about your next interior project. A conversation starts here Let’s create something considered. For product information, design support and project enquiries, tell us a little about what you have in mind. Visit INOX Verified business address, contact number and opening hours are pending brand confirmation. No unverified WhatsApp or map links are published."
     },
     {
       "title": "INOX catalogues",
       "href": "/catalogues",
-      "text": "Collection overview All collection links currently open the same legacy PDF supplied in the existing repository. Current category-specific PDFs are pending. Need technical documentation? Contact"
+      "text": "All collections Collection overview Download supplied INOX catalogue All collection links currently open the same legacy INOX PDF supplied in the existing repository. Current category-specific PDFs are pending. Need technical documentation? Contact INOX"
     },
     {
       "title": "XCOMB aluminium honeycomb panels",
       "href": "/xcomb",
-      "text": "The intelligence within Extraordinary, at the core. Discover INOX XCOMB aluminium honeycomb panels. A cellular core brings a different approach to panel construction, opening possibilities for considered interior surfaces. A cellular foundation An aluminium honeycomb core sits between outer layers, creating a sandwich panel structure inspired by the efficiency of a honeycomb. A surface for your vision Explore panel possibilities for furniture, cabinetry and interior features. The right finish and construction depend on your application. Details that make the difference Talk to our team about panel sizes, available finishes, edge details and suitability before specifying XCOMB for your project."
+      "text": "Xcomb The intelligence within Extraordinary, at the core. Discover INOX XCOMB aluminium honeycomb panels. A cellular core brings a different approach to panel construction, opening possibilities for considered interior surfaces. Surface Structure Possibility 01 A cellular foundation An aluminium honeycomb core sits between outer layers, creating a sandwich panel structure inspired by the efficiency of a honeycomb. 02 A surface for your vision Explore panel possibilities for furniture, cabinetry and interior features. The right finish and construction depend on your application. 03 Details that make the difference Talk to our team about panel sizes, available finishes, edge details and suitability before specifying XCOMB for your project."
     },
     {
       "title": "INOX Facade",
       "href": "/facade",
-      "text": "Architecture, in a new light Bespoking Luxury Metalness \b Grandiodising Exterirors and Interiors. An architectural signature Explore expressive surfaces for entrances, exterior compositions and distinctive architectural features. Designed around light Consider how profiles, patterns and finishes change with the sun, bringing depth and movement to a building’s elevation. A considered specification Discuss the finish, supporting structure and installation requirements with our team to find a direction suited to your project."
+      "text": "Facade Architecture, in a new light Buildings System Bespoking Luxury Metalness \b Grandiodising Exterirors and Interiors. Rhythm Texture Identity 01 An architectural signature Explore expressive surfaces for entrances, exterior compositions and distinctive architectural features. 02 Designed around light Consider how profiles, patterns and finishes change with the sun, bringing depth and movement to a building’s elevation. 03 A considered specification Discuss the finish, supporting structure and installation requirements with our team to find a direction suited to your project."
     },
     {
       "title": "Honeycomb public experience",
@@ -71,17 +76,47 @@
     {
       "title": "INOX privacy policy",
       "href": "/privacy",
-      "text": "n guarantee absolute security. Keep your password private and sign out when using a shared device. You can sign out at any time and view your saved enquiries from My account. To ask about your information, request a correction, or request deletion of account or enquiry records, contact the INOX team . We may need to verify your identity before acting on a request. Some records may need to be retained for applicable obligations. Please do not include passwords or sensitive personal information in an enquiry. This policy describes the INOX website account and enquiry services. We may update it as these services change. For questions about this policy or how website information is handled, please"
+      "text": "n guarantee absolute security. Keep your password private and sign out when using a shared device. You can sign out at any time and view your saved enquiries from My account. To ask about your information, request a correction, or request deletion of account or enquiry records, contact the INOX team . We may need to verify your identity before acting on a request. Some records may need to be retained for applicable obligations. Please do not include passwords or sensitive personal information in an enquiry. This policy describes the INOX website account and enquiry services. We may update it as these services change. For questions about this policy or how website information is handled, please get in touch . Privacy policy Your privacy matters. A clear look at the information you share with INOX, why we use it and the choices available to you. In this policy"
     },
     {
       "title": "INOX home",
       "href": "/",
-      "text": "The art of everyday living The details make the difference. Every time. Every day. Discover the collection Engineered interiors. Designed to endure. is a complete interior solutions brand offering premium Hardware, Kitchens, Wardrobes, XCOMB aluminium honeycomb panels and Facade. 26+ Years of Excellence 670+ Channel Partners 4M+ Happy Customers Presence in 18 States, 85 Cities Considered details. Extraordinary spaces. Living collections / Engineering in motion Explore fittings, hardware and storage solutions that bring every part of your interior together. Explore all products Materials. Movement. Possibilities. Thoughtfully selected. Beautifully connected. Find the right details for your project Designed for spaces A kitchen that moves with you. A wardrobe that brings order to your day. Hardware that quietly makes everything feel right. We believe the best details are the ones you feel, every day. KITCHEN · WARDROBE · HARDWARE Explore the finer details Explore our interior solutions, materials and possibilities in the"
+      "text": "The art of everyday living A kitchen worth staying in. The details make the difference. Every time. Every day. Discover the collection INOX Engineered interiors. Designed to endure. INOX is a complete interior solutions brand offering premium Hardware, Kitchens, Wardrobes, XCOMB aluminium honeycomb panels and Facade. Explore Products Partner With Us 26+ Years of Excellence 2,100+ Products 670+ Channel Partners 4M+ Happy Customers Presence in 18 States, 85 Cities Global Presence The INOX collections Considered details. Extraordinary spaces. Living collections / Engineering in motion Explore fittings, hardware and storage solutions that bring every part of your interior together. Explore all products Materials. Movement. Possibilities. collections / INOX Thoughtfully selected. Beautifully connected. Find the right details for your project The INOX perspective Designed for spaces that demand more. A kitchen that moves with you. A wardrobe that brings order to your day. Hardware that quietly makes everything feel right. We believe the best details are the ones you feel, every day. Discover our story INOX THE ART OF CONSIDERED LIVING. KITCHEN · WARDROBE · HARDWARE Explore the finer details Your next idea starts here. Explore our interior solutions, materials and possibilities in the INOX collection. View Catalogues"
+    },
+    {
+      "title": "INOX home",
+      "href": "/",
+      "text": "ils Your next idea starts here. Explore our interior solutions, materials and possibilities in the INOX collection. View Catalogues"
     },
     {
       "title": "Product enquiry process",
       "href": "/enquiry",
-      "text": "Made for your project. Your enquiry basket is empty. Tell us about your project City / Project location Product information I agree to be contacted by about this enquiry. Your enquiry will reach our team. before sending to also save it to your account. View your saved enquiries"
+      "text": "Your selection Made for your project. Quantity Your enquiry basket is empty. Explore products Continue exploring Tell us about your project Let’s make room for your ideas. Full name Company Email address Phone number City / Project location Enquiry type Project enquiry Product information Become a partner Your message Website I agree to be contacted by INOX about this enquiry. Your enquiry will reach our team. Sign in before sending to also save it to your account. View your saved enquiries"
+    },
+    {
+      "title": "Product browsing and comparison",
+      "href": "/products",
+      "text": "Explore INOX interior solutions and select products for your project enquiry. Home Products The INOX collection Products, precisely considered. Explore architectural hardware, fittings and accessories for your project."
+    },
+    {
+      "title": "Catalogue download guidance",
+      "href": "/catalogues",
+      "text": "Explore the INOX collection and download the supplied brand catalogue. The collection, considered Ideas begin in the details. A closer look at the possibilities for your next project."
+    },
+    {
+      "title": "INOX journal introduction",
+      "href": "/blog",
+      "text": "Thoughtful advice on kitchen hardware, cabinet fittings and the details that make everyday spaces work beautifully. The INOX journal / Blog Better spaces. By design. Ideas, practical guides and a closer look at the details that make everyday living feel effortless. Latest stories articles / Hardware & everyday living Read the story Considered details. Everyday difference. Good design is in the things you use every day. Explore collections"
+    },
+    {
+      "title": "Public footer and contact links",
+      "href": "/",
+      "text": "Considered details. Extraordinary everyday spaces. Explore INOX Our story Our solutions Catalogues Blog Let’s connect Project enquiries Become a partner Partner administration Address: Plot No.1/2, Block B-1, Main, Najafgarh Rd, Janakpuri East, New Delhi, Delhi 110058. A space for possibility Good design begins with a conversation. Start yours © INOX Decor. All rights reserved. Privacy policy Skip to content Chat with INOX"
+    },
+    {
+      "title": "Design events introduction",
+      "href": "/",
+      "text": "Events / The INOX journal Experience. Connect. Be inspired. 01 — 06 / Event stories Real spaces. Fresh perspectives. Lasting connections. Step into our world of design, through moments from Pune and Indore. Select a story to explore the gallery photos Explore story Good design brings people together. Connect with INOX INOX / · photographs — photograph Back to story"
     }
   ]
 }

@@ -3,27 +3,27 @@
     {
       "title": "About INOX",
       "status": "indexed",
-      "characters": 471
+      "characters": 770
     },
     {
       "title": "Contact INOX",
       "status": "indexed",
-      "characters": 207
+      "characters": 389
     },
     {
       "title": "INOX catalogues",
       "status": "indexed",
-      "characters": 194
+      "characters": 253
     },
     {
       "title": "XCOMB aluminium honeycomb panels",
       "status": "indexed",
-      "characters": 702
+      "characters": 747
     },
     {
       "title": "INOX Facade",
       "status": "indexed",
-      "characters": 528
+      "characters": 585
     },
     {
       "title": "Honeycomb public experience",
@@ -96,17 +96,42 @@
     {
       "title": "INOX privacy policy",
       "status": "indexed",
-      "characters": 3102
+      "characters": 3270
     },
     {
       "title": "INOX home",
       "status": "indexed",
-      "characters": 1034
+      "characters": 1331
     },
     {
       "title": "Product enquiry process",
       "status": "indexed",
-      "characters": 278
+      "characters": 495
+    },
+    {
+      "title": "Product browsing and comparison",
+      "status": "indexed",
+      "characters": 218
+    },
+    {
+      "title": "Catalogue download guidance",
+      "status": "indexed",
+      "characters": 183
+    },
+    {
+      "title": "INOX journal introduction",
+      "status": "indexed",
+      "characters": 442
+    },
+    {
+      "title": "Public footer and contact links",
+      "status": "indexed",
+      "characters": 426
+    },
+    {
+      "title": "Design events introduction",
+      "status": "indexed",
+      "characters": 367
     }
   ]
 }

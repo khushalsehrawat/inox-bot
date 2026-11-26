@@ -53,3 +53,12 @@ test('Ask INOX approved document search preserves brochure page citations',()=>{
   assert.deepEqual(core.searchSources([source],'XCOMB panel'),[source]);
   assert.deepEqual(core.searchSources([source],'unicorn'),[]);
 });
+
+ test('INOX perspective and public policy questions retrieve website sources without a product match',()=>{
+ const index=JSON.parse(fs.readFileSync(new URL('../src/lib/ask-inox-documents.json',import.meta.url),'utf8'));
+ const result=core.searchSources(index.chunks,'What is INOX perspective?');
+ assert.ok(result.some(s=>s.href==='/' && /best details|demand more/i.test(s.text)));
+ assert.ok(result.some(s=>/perspective/i.test(s.text)));
+ assert.ok(core.searchSources(index.chunks,'privacy policy').some(s=>s.href==='/privacy'));
+ assert.equal(core.searchCatalogue([],'What is INOX perspective?').products.length,0);
+ });

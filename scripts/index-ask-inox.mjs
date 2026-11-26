@@ -56,12 +56,14 @@ for (const source of manifest.sources) {
     const visit=node=>{
       if(source.collection && ts.isStringLiteral(node) && !/^(image|alt)$/.test(node.parent.name?.getText(file) || '')) content.push(node.text);
       else if(!source.collection && ts.isJsxText(node)) content.push(node.text);
+      else if(!source.collection && ts.isJsxAttribute(node) && /^(title|eyebrow|description)$/.test(node.name.getText(file)) && node.initializer && ts.isStringLiteral(node.initializer)) content.push(node.initializer.text);
+      else if(!source.collection && ts.isStringLiteral(node) && ts.isArrayLiteralExpression(node.parent)) content.push(node.text);
       else if(!source.collection && ts.isPropertyAssignment(node) && node.name.getText(file)==='description' && ts.isStringLiteral(node.initializer)) content.push(node.initializer.text);
       ts.forEachChild(node,visit);
     };
     visit(scope);
   }
-  const cleaned=content.map(s=>s.replace(/\s+/g,' ').trim()).filter(s=>s.length>18 && !/confidential|internal only|dealer price|wholesale|\bINR\s*\d/i.test(s) && !/^\/|\.(png|webp|jpg)$/.test(s)).join(' ');
+  const cleaned=content.map(s=>s.replace(/\s+/g,' ').trim()).filter(s=>s.length>0 && !/confidential|internal only|dealer price|wholesale|\bINR\s*\d/i.test(s) && !/^\/|\.(png|webp|jpg)$/.test(s)).join(' ');
   for(let offset=0;offset<cleaned.length;offset+=1200) chunks.push({title,href,text:cleaned.slice(offset,offset+1400)});
   report.push({title,status:cleaned ? 'indexed' : 'manual-review',characters:cleaned.length});
 }
