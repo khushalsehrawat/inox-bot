@@ -1,5 +1,5 @@
 import "server-only";
-import { demoCatalogueEnabled, demoCategories, demoProducts } from "./ask-inox-demo-products";
+import { mainSiteConnected, mainSiteCategories, mainSiteProducts } from "./main-site-catalogue";
 import { cache } from "react";
 import { unstable_cache, revalidateTag, revalidatePath } from "next/cache";
 import { mysqlStore, type AsyncStore } from "./web-mysql-store.mjs";
@@ -39,14 +39,14 @@ export function invalidateWebCatalogue() {
   revalidatePath("/", "layout");
 }
 export const getPublicWebCategories = cache(unstable_cache(
-  async (): Promise<WebCategory[]> => demoCatalogueEnabled() ? demoCategories : withTaxonomy((store) => store.list(true)),
-  ["public-web-categories"], { tags: [catalogueTag], revalidate: 60 },
+  async (): Promise<WebCategory[]> => mainSiteConnected() ? mainSiteCategories() : withTaxonomy((store) => store.list(true)),
+  ["public-web-categories",mainSiteConnected()?"main-site":"database"], { tags: [catalogueTag], revalidate: 60 },
 ));
 export async function getAllWebProducts(
   publicOnly = false,
   loadedDrafts?: Awaited<ReturnType<AsyncStore["productDrafts"]>>,
 ): Promise<Product[]> {
-  if(publicOnly && demoCatalogueEnabled())return structuredClone(demoProducts);
+  if(publicOnly && mainSiteConnected())return mainSiteProducts();
   return withTaxonomy(async (store) => {
     const [visible, assignments, drafts] = await Promise.all([
       store.list(true), store.assignments(), loadedDrafts ?? store.productDrafts(),
@@ -67,5 +67,5 @@ export async function getAllWebProducts(
 }
 export const getWebProducts = cache(unstable_cache(
   () => getAllWebProducts(true),
-  ["public-web-products"], { tags: [catalogueTag], revalidate: 60 },
+  ["public-web-products",mainSiteConnected()?"main-site":"database"], { tags: [catalogueTag], revalidate: 60 },
 ));

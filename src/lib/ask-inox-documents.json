@@ -10,7 +10,7 @@
     "public/media/collection.pdf": "594e5073eb3892ee234544bfd3cab99085bef680d6ba769505374dab7f0b59d0",
     "src/app/privacy/page.tsx": "443b4e99a6f77bd104773660f2228e6c5efba3e9edffd14ce256020b6a87db58",
     "src/app/page.tsx": "1ac2eb0a241cbd8336327496b0c996a6c93eebba60d0acb2d4582de15f310b95",
-    "src/components/enquiry-form.tsx": "5970065f6e306e20661d9831032cdce0685faedc4e83db9296120217e715e31a",
+    "src/components/enquiry-form.tsx": "88225f013a8c723a0f9ea8f5c37709a1cf6efc3c331c4d0e86cda09357e0efd7",
     "src/app/products/page.tsx": "448f35b43b7c07e47e29afec0dd85641667c2934559e382eec5b37da5ed22b26",
     "src/app/catalogues/page.tsx": "93fc0fcbd776bdafce2b18f88e1d9e452eba17a36e54cff5dbf792a452a841c4",
     "src/app/blog/page.tsx": "fed85834f23938d3e83119d86691a165ae4c2b367a20a6c9542a701edca1597e",
@@ -91,7 +91,7 @@
     {
       "title": "Product enquiry process",
       "href": "/enquiry",
-      "text": "Your selection Made for your project. Quantity Your enquiry basket is empty. Explore products Continue exploring Tell us about your project Let’s make room for your ideas. Full name Company Email address Phone number City / Project location Enquiry type Project enquiry Product information Become a partner Your message Website I agree to be contacted by INOX about this enquiry. Your enquiry will reach our team. Sign in before sending to also save it to your account. View your saved enquiries"
+      "text": "Review your selections here, then open each exact variant on the main website to add it to your main-site enquiry. Your basket is not transferred automatically. Your selection Made for your project. Open this variant on main site Quantity Your enquiry basket is empty. Explore products Continue exploring Tell us about your project Let’s make room for your ideas. Full name Company Email address Phone number City / Project location Enquiry type Project enquiry Product information Become a partner Your message Website I agree to be contacted by INOX about this enquiry. Your enquiry will reach our team. Sign in before sending to also save it to your account. View your saved enquiries"
     },
     {
       "title": "Product browsing and comparison",

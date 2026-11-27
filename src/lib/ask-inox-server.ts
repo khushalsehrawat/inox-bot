@@ -1,8 +1,8 @@
 import "server-only";
-import { demoCatalogueEnabled } from "./ask-inox-demo-products";
+import { mainSiteConnected, mainSiteSources, MAIN_SITE_ORIGIN } from "./main-site-catalogue";
 import { createHash, randomBytes } from "node:crypto";
 import { NextRequest, NextResponse } from "next/server";
-import { getAllWebProducts, getPublicWebCategories, withTaxonomy } from "./web-taxonomy";
+import { getAllWebProducts, getPublicWebCategories } from "./web-taxonomy";
 import { getBlogPosts } from "./blog-store";
 import { categoryPath } from "./category-tree.mjs";
 import { isSameOrigin } from "./request";
@@ -93,7 +93,12 @@ export async function lookup(s:Session,query:string):Promise<AskLookup> {
   }catch{result.notice+=" Published blog content is temporarily unavailable.";}
   result.sources=searchSources(sources.filter(s=>s.text),query);
   if(!result.products.length && result.sources.length && catalogueAvailable)result.notice="Verified public website excerpts found. Answer brand/site questions from these sources; no product match is required. Product facts still require live catalogue verification.";
-  if(demoCatalogueEnabled())result.notice="DEMO CATALOGUE: these are synthetic test products, not verified real INOX products. Explicitly say demo when discussing their illustrative specs. Do not claim stock, pricing, warranty or real compatibility. Enquiry review works, but submission is disabled.";
+  if(mainSiteConnected()){
+    result.products=result.products.map(p=>({...p,href:MAIN_SITE_ORIGIN+p.href}));
+    const current=await mainSiteSources(query);
+    result.sources=searchSources(current,query);
+    result.notice=catalogueAvailable?"Read from the real main website's published public catalogue and pages. No synthetic products, private data or pricing included. Catalogue availability flags are not live stock confirmation.":"Main website catalogue could not be verified. Answer only from returned public source excerpts; do not invent products.";
+  }
   s.discussed=[...new Set([...result.products.map(p=>p.id),...s.discussed])].slice(0,8);
   return result;
 }

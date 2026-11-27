@@ -20,13 +20,13 @@ export function Picture({
     <div className={`picture ${className}`}>
       {src ? (
         <Image
-          src={src.startsWith("/") ? src : `/media/${src}`}
+          src={src.startsWith("/") || src.startsWith("https://inoxdecor.com/") ? src : `/media/${src}`}
           alt={alt}
           fill
           style={framing ? { scale: framing.zoom ?? 1, objectPosition: `${framing.positionX ?? 50}% ${framing.positionY ?? 50}%` } : undefined}
           sizes="(max-width: 700px) 100vw, 50vw"
           priority={priority}
-          unoptimized={src.startsWith("/api/")}
+          unoptimized={src.startsWith("/api/") || src.startsWith("https://inoxdecor.com/")}
         />
       ) : (
         <span className="collection-image-placeholder">

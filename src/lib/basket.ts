@@ -5,7 +5,7 @@ export function readBasket(): BasketItem[] {
     return Array.isArray(value)
       ? value.filter(
           (v) =>
-            typeof v.id === "string" &&
+            typeof v.id === "string" && !v.id.startsWith("demo-product-") &&
             Number.isInteger(v.quantity) &&
             v.quantity > 0 &&
             v.quantity <= 999,

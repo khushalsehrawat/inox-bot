@@ -1,3 +1,4 @@
+import { mainSiteConnected } from "@/lib/main-site-catalogue";
 import { getWebProducts } from "@/lib/web-taxonomy";
 import { PageIntro } from "@/components/ui";
 import { EnquiryForm } from "@/components/enquiry-form";
@@ -13,7 +14,7 @@ export default async function Enquiry() {
         title="Your project, coming together."
         description="Review your products and quantities, then share your project details."
       />
-      <EnquiryForm basket products={await getWebProducts()} />
+      <EnquiryForm basket mainSite={mainSiteConnected()} products={await getWebProducts()} />
     </main>
   );
 }

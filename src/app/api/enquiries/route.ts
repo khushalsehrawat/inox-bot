@@ -1,4 +1,4 @@
-import { demoCatalogueEnabled } from "@/lib/ask-inox-demo-products";
+import { mainSiteConnected } from "@/lib/main-site-catalogue";
 import { isSameOrigin } from "@/lib/request";
 import { NextRequest, NextResponse } from "next/server";
 import { getWebProducts } from "@/lib/web-taxonomy";
@@ -9,7 +9,7 @@ import { customerSession } from "@/lib/website-customers";
 import { limitedBody } from "@/lib/web-admin";
 import { notifySavedEnquiry } from "@/lib/enquiry-mail.mjs";
 export async function POST(req: NextRequest) {
-  if(demoCatalogueEnabled())return NextResponse.json({message:"Demo products can be reviewed in your enquiry, but demo enquiries cannot be submitted."},{status:409});
+  if(mainSiteConnected())return NextResponse.json({message:"Your selection is saved for review here. Please complete the enquiry on inoxdecor.com using the exact product variants. This separate bot site cannot submit to the main website."},{status:409});
   if (!isSameOrigin(req))
     return NextResponse.json(
       { message: "Invalid request origin." },

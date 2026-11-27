@@ -6,7 +6,7 @@ import { ArrowRight, Trash2, ShoppingBag } from "lucide-react";
 import { products as referenceProducts, type Product } from "@/lib/data";
 import { readBasket, saveBasket, type BasketItem } from "@/lib/basket";
 import { useCustomer } from "./customer-account";
-export function EnquiryForm({ basket = false, products = referenceProducts }: { basket?: boolean; products?: Product[] }) {
+export function EnquiryForm({ basket = false, products = referenceProducts, mainSite = false }: { basket?: boolean; products?: Product[]; mainSite?:boolean }) {
   const { user, ready } = useCustomer();
   const formRef = useRef<HTMLFormElement>(null);
   const [savedToAccount, setSavedToAccount] = useState(false);
@@ -58,6 +58,7 @@ export function EnquiryForm({ basket = false, products = referenceProducts }: { 
   }
   return (
     <div className="enquiry-layout">
+      {mainSite && <p role="status">Review your selections here, then open each exact variant on the main website to add it to your main-site enquiry. Your basket is not transferred automatically.</p>}
       {basket && (
         <section className="basket-panel">
           <span className="eyebrow">Your selection</span>
@@ -71,6 +72,7 @@ export function EnquiryForm({ basket = false, products = referenceProducts }: { 
                   </h3>
                   <small>{products.find((p) => p.id === item.id)?.variations?.find(v=>v.id===item.variationId)?.sku || products.find((p) => p.id === item.id)?.sku}</small>
                 </div>
+                {mainSite && <a href={`https://inoxdecor.com/products/${encodeURIComponent(item.id)}${item.variationId?`?variation=${encodeURIComponent(item.variationId)}`:""}`} target="_blank" rel="noreferrer">Open this variant on main site</a>}
                 <label>
                   Quantity
                   <input
@@ -113,7 +115,7 @@ export function EnquiryForm({ basket = false, products = referenceProducts }: { 
           </Link>
         </section>
       )}
-      <form ref={formRef} className="enquiry-form" onSubmit={submit}>
+      {!mainSite && <form ref={formRef} className="enquiry-form" onSubmit={submit}>
         <span className="eyebrow">Tell us about your project</span>
         <h2>
           Let’s make room
@@ -178,7 +180,7 @@ export function EnquiryForm({ basket = false, products = referenceProducts }: { 
           {user ? "Your submitted enquiry will be saved to your INOX account, so you can revisit it on any device." : <>Your enquiry will reach our team. <Link className="text-link" href="/login?next=%2Fenquiry">Sign in</Link> before sending to also save it to your account.</>}
         </p>
         <div className="form-actions">
-          <button className="button dark" disabled={busy || !ready || items.some(item=>item.id.startsWith("demo-product-"))}>
+          <button className="button dark" disabled={busy || !ready}>
             {busy ? "Sending…" : "Send enquiry"}
             <ArrowRight size={16} />
           </button>
@@ -189,7 +191,7 @@ export function EnquiryForm({ basket = false, products = referenceProducts }: { 
           </p>
         )}
         {savedToAccount && <Link className="text-link" href="/account">View your saved enquiries <ArrowRight size={15} /></Link>}
-      </form>
+      </form>}
     </div>
   );
 }

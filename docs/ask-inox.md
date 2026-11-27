@@ -1,3 +1,7 @@
+This Vercel bot repository now reads the real anonymous public website at https://inoxdecor.com. The synthetic demo catalogue has been removed. Set ASK_INOX_CATALOGUE_SOURCE=main-site for this connection explicitly; on Vercel with no database settings it is automatic. Product images and View Details point to the actual main website. The source is refreshed through a 60-second public-read cache. No internal pricing, account information or database secrets are requested.
+
+The separate preview basket can be reviewed, but cannot automatically transfer to the main site's origin. Open the exact variant on the main site to complete the actual enquiry there. No main-site submission endpoints are proxied.
+
 # Ask INOX on the main website
 
 Ask INOX now uses the main website catalogue and live providers. The isolated demo, scripted speech, sample transcripts, fixture launcher and fixture browser suite have been removed.
